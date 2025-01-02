@@ -2,6 +2,7 @@ package info.abelian.sdk.demo;
 
 import java.util.Map;
 
+import info.abelian.sdk.common.AbelAddress;
 import info.abelian.sdk.common.AbelException;
 import info.abelian.sdk.wallet.Account;
 import info.abelian.sdk.wallet.PrivacyLevel;
@@ -18,6 +19,12 @@ public class DemoAccount {
             System.out.printf("\n--> FullyPrivateAccounts[%d]\n", i);
             fullyPrivateAccounts[i] = Account.generateAccount(chainID, PrivacyLevel.FULLY_PRIVATE);
             printAccountInfo(fullyPrivateAccounts[i]);
+
+            AbelAddress abelAddress = fullyPrivateAccounts[i].generateAbelAddress();
+            System.out.printf("\n--> Fully-private AbelAddress of FullyPrivateAccounts[%s]\n", abelAddress);
+
+            AbelAddress anotherAbelAddress = fullyPrivateAccounts[i].generateAbelAddress();
+            System.out.printf("\n--> another Fully-private AbelAddress of FullyPrivateAccounts[%s]\n", anotherAbelAddress);
         }
 
         Account[] pseudoPrivateAccounts = new Account[3];
@@ -25,6 +32,12 @@ public class DemoAccount {
             System.out.printf("\n--> PseudoPrivateAccounts[%d]\n", i);
             pseudoPrivateAccounts[i] = Account.generateAccount(chainID, PrivacyLevel.PSEUDO_PRIVATE);
             printAccountInfo(pseudoPrivateAccounts[i]);
+
+            AbelAddress abelAddress = pseudoPrivateAccounts[i].generateAbelAddress();
+            System.out.printf("\n--> Pseudo-private AbelAddress of PseudoPrivateAccounts[%s]\n", abelAddress);
+
+            AbelAddress anotherAbelAddress = pseudoPrivateAccounts[i].generateAbelAddress();
+            System.out.printf("\n--> another Pseudo-private AbelAddress of PseudoPrivateAccounts[%s]\n", anotherAbelAddress);
         }
 
         System.out.println("\n==> Show builtin accounts.");
