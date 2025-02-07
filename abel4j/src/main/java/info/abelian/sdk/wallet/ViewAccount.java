@@ -2,15 +2,12 @@ package info.abelian.sdk.wallet;
 
 import info.abelian.sdk.common.*;
 
-import info.abelian.sdk.proto.Core;
 import info.abelian.sdk.proto.Core.CoinReceiveFromTxOutDataResult;
 import info.abelian.sdk.proto.Core.BlockDescMessage;
 
 import info.abelian.sdk.common.CryptoSeed.DetectorRootKey;
 import info.abelian.sdk.common.CryptoSeed.SerialNoSecretRootSeed;
 import info.abelian.sdk.common.CryptoSeed.ViewSecretRootSeed;
-
-import java.io.Serial;
 
 public class ViewAccount extends AbelBase {
     protected int chainID;
