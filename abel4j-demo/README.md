@@ -9,7 +9,8 @@
 
 ### 1.1. Get the demos
 
-Download and decompress `abec4j-demo-x.y.z.zip` to get the demo directory `abel4j-demo`. Go to the demo directory and we will run all the demos from there.
+Download and decompress `abec4j-demo-x.y.z.zip` to get the demo directory `abel4j-demo`.
+Navigate to the demo directory to run the demos.
 
 ```bash
 unzip abel4j-demo-x.y.z.zip
@@ -24,7 +25,7 @@ Run the following command to test if your Java environment is ready for the demo
 bin/abel4j-demo
 ```
 
-The expected output should be like this:
+The expected output should be a list of available demos:
 
 ```text
 Usage: java -jar abec4j-demo.jar <demoName> [demoArgs]
@@ -42,20 +43,21 @@ Available demos:
   SubmitSignedRawTx
   TrackSpentCoins
 ```
-
-As shown above, run `bin/abel4j-demo` without any arguments will list all the available demos.
+If running `bin/abel4j-demo` without arguments, it will list all available demos.
 
 ### 1.3. Test native library
 
-The Abelian SDK for Java depends on a native library `libabelsdk` built from the Abelian SDK for Go. The native library binaries for all supported platforms (`libabelsdk.so.x` for Linux,`libabelsdk.x.dylib` for macOS) are already included in the SDK jar file `abel4j-x.y.z.jar`.
+The Abelian SDK for Java depends on a native library `libabelsdk` which currently built from the Abelian SDK for Go.
+The binaries for this native library are included in the SDK jar file abel4j-x.y.z.jar.
 
-As of the time of writing, the native library is built for the following platforms:
+As of the time of writing, the platform compatibility is as follows:
 - Linux x86
 - Linux arm64
 - MacOS x86
 - MacOS arm64 (Apple Silicon)
 
-The SDK jar file contains all the above native libraries for the supported platforms. When you run the demos, the SDK will automatically load the native library compatible with your platform.
+The SDK jar file contains all the above native libraries for the supported platforms. 
+When you run the demos, the SDK will automatically load the native library compatible with your platform.
 
 Run the following command to test if the native library included in the SDK jar file is compatible with your platform.
 
@@ -97,21 +99,27 @@ default.chain = testnet
 
 If the `Crypto` demo runs successfully, then the native library included in the SDK jar file is compatible with your platform.
 
-Note that this demo is for testing purpose only. It invokes low-level cryptographic APIs of the native library which is unlikely to be used directly in your applications. Therefore, it doesn't matter if you don't understand the output here or its source code. The only important thing is whether the demo runs successfully.
+Note that this demo is for testing purpose only. 
+It invokes low-level cryptographic APIs of the native library which is unlikely to be used directly in your applications. 
+Therefore, it doesn't matter if you don't understand the output here or its source code. 
+The only important thing is whether the demo runs successfully.
 
 ### 1.3 Test the default Abec full node for the demos
 
-The Abelian SDK for Java depends on an Abec full node to access the data on the Abelian blockchain. In the default settings, the demos will connect to an Abec full node maintained by the Abelian Foundation. It allows you to run the demos without setting up your own Abec full node.
+The Abelian SDK for Java depends on an Abec full node to access the data on the Abelian blockchain.
+By default, the demos will connect to an Abec full node maintained by the Abelian Foundation. 
+This full node allows you to run the demos without setting up your own Abec full node.
 
-Note that the default Abec full node is for testing purpose only. It is not stable and may be reset at any time. **For production use, you should always set up your own Abec full node for real-world applications.**
+Note that this Abec full node is for testing purpose only and may be reset at any time.
+**For production use, you're expected to always set up your own full node for formal applications.**
 
-Run the following command to test if the default Abec full node is accessible from your machine.
+Run the following command to test if the default Abec full node is accessible:
 
 ```bash
 bin/abel4j-demo AbecRPCClient
 ```
 
-The expected output should be like this:
+The expected output should be like following:
 
 ```text
 demoName = AbecRPCClient
@@ -173,7 +181,11 @@ If the `AbecRPCClient` demo runs successfully, then the default Abec full node i
 
 > **Milestone**
 > 
-> If you have reached this point, congratulations! You have successfully installed the Abelian SDK for Java and tested if it is working properly. You can now learn how to use the SDK to develop your own applications. In the following section, we will omit some output of the demos for brevity. You can run the demos yourself to see the full output.
+> If you have reached this point, congratulations! 
+> You have successfully installed the Abelian SDK for Java and tested if it is working properly. 
+> You can now learn how to use the SDK to develop your own applications. 
+> In the following section, we will omit some output of the demos for brevity. 
+> You can run the demos yourself to see the full output.
 
 ## 2. Understand account in Abelian SDK
 
@@ -191,41 +203,40 @@ An account in the Abelian SDK (both for Java and Go) consists of the following c
 
 - **Privacy Level**: An important mechanism for controlling data public visibility for specified account, which can effectively protect transaction participants and hidden the coin value.
   Abelian has two levels of privacy, namely fully-private privacy level and pseudo-private privacy level.
-  The coins with fully-private privacy level would hide the coin value in the transaction, and their transfers are not traceable, while the coins with pseudo-private privacy level would public the coin value in the transaction, and their transfers are traceable.
+  - **Fully-Private Privacy Level**: Hides the coin value and makes transfers untraceable.
+  - **Pseudo-Private Privacy Level**: Publicly shows the coin value and allows tracking of transfers.
 
 
-For integrating with existing wallets, such as Abelian Desktop Wallet Pro, the above root seeds and keys can be derived from somewhere, i.e., 
-entropy seed, referred to as `Entropy Seed` in the low-level APIs of the Abelian SDK,
-or its one alternative form, say mnemonics, referred to as `Mnemonics` in the low-level APIs of the Abelian SDK.
+For integrating with existing wallets, such as Abelian Desktop Wallet Pro, the above root seeds and keys can be derived from an entropy seed or mnemonics.
 
-- **Entropy Seed**: A 32-byte random data used to derive secret info such as all above seeds and keys. 
+- **Entropy Seed**: A 32-byte random data used to derive account info such as all above seeds and keys. 
 
-- **Mnemonics**: A 24-word list used to derive secret info such as all above seeds and keys.
+- **Mnemonics**: A 24-word list used to derive account info such as all above seeds and keys.
 
-In order to receive coins, the account needs to provide an address to the outside:
+To receive coins, the account needs to provide an address to the outside:
 
 - **Abel Address**: A 10859-byte or 231-byte *address* to receive ABELs. An account can also have many addresses.
-The coins on 10859-byte *address* has the fully-private privacy, while coins on 231-byte *address* has the pseudo-private privacy.
-We often referred to it as `Address` for short. It can be generated from the crypto seeds.
 
 - **Short Address**: A 68-byte *address* to receive ABELs. It is calculated from the abel address and can be used as a shorter alternative to the lengthy abel address. Note that a short address must be registered on the Abelian Name Service (ANS) before it can be used to receive ABELs.
 
 > **Note**
 >
-> **Serial Number Secret Root Seed** or **View Secret Root Seed** are called *semi-secret seed* because revealing them to untrusted parties will only compromise the privacy of the account. The funds in the account are safe as long as the **Spend Secret Root Seed** is not revealed.
+> - **Serial Number Secret Root Seed** or **View Secret Root Seed** are called *semi-secret seed* because revealing them to untrusted parties will only compromise the privacy of the account. The funds in the account are safe as long as the **Spend Secret Root Seed** is not revealed.
 >
-> For trusted parties (e.g., an internal Abelian Super Node), the *semi-secret seeds* can be revealed to them to allow them to track the spent coins and the balance of the account. In this sense, they can be treated as **public keys**.
+> - For trusted parties (e.g., an internal Abelian Super Node), the *semi-secret seeds* can be revealed to them to allow them to track the spent coins and the balance of the account. In this sense, they can be treated as **public keys**.
 >
-> Note that for **Pseudo-private** privacy level, **Serial Number Secret Root Seed** and **View Secret Root Seed** is idle.
+> - Note that for **Pseudo-private** privacy level, **Serial Number Secret Root Seed** and **View Secret Root Seed** is idle.
 >
-> In the following description,  all accounts will be pseudo-private.
-> For ease of use, `sequence account` is introduced to generate addresses in specified order, i.e., using the same sequence number would generate the same address.
+> - The coins on 10859-byte *address* has the fully-private privacy, while coins on 231-byte *address* has the pseudo-private privacy.
+    We often referred to it as `Address` for short. It can be generated from the crypto seeds.
+> 
+> - For some specific applications, `sequence account` is introduced to generate addresses in specified order, i.e., using the same sequence number would generate the same address.
 > And more, an account with the **secret seed** (i.e., **Spend Secret Root Seed**) is called a `signer account`; an account without the **secret seed** is called a `viewer account`.
 
 
 ### 2.2. Create, import and export accounts
 
-The `Account` demo shows how to create, import and export accounts:
+The `Account` demo shows how to create, import and export accounts, note that all accounts will be pseudo-private sequence account:
 
 ```bash
 bin/abel4j-demo Account
@@ -235,9 +246,6 @@ bin/abel4j-demo Account
 
 There are 10 built-in pseudo-private accounts that will be used in the following demos to illustrate the key functionalities required by a non-trivial application (e.g., an exchange wallet). 
 
-### 2.4. Short address
-
-# TODO short address with ANS
 
 ## 3. Separate cold data and hot data to support offline signing
 
@@ -265,11 +273,14 @@ Count of txs     : 0
 Count of accounts: 10
 ```
 
-The `WalletDB` demo creates two wallet databases in `sqlite3` format under `$HOME/.abel4j`: a *cold database* named `demo-testnet-cold-wallet.db` and a *hot database* named `demo-testnet-hot-wallet.db`. You may use any `sqlite3` GUI client or the `sqlite3` command to view the content of the databases.
+The `WalletDB` demo creates two wallet databases in `sqlite3` format under `$HOME/.abel4j`: 
+a *cold database* named `demo-testnet-cold-wallet.db` and a *hot database* named `demo-testnet-hot-wallet.db`. 
+You may use any `sqlite3` GUI client or the `sqlite3` command to view the content of the databases.
 
 ### 3.2. Cold Database
 
-The *cold database* stores all seeds and keys of the managed accounts for offline signing. It contains only one table `signer_account`:
+The *cold database* stores all seeds and keys of the managed accounts for offline signing. 
+It contains only one table `signer_account`:
 
 ```bash
 sqlite3 $HOME/.abel4j/demo-testnet-cold-wallet.db
@@ -308,7 +319,9 @@ In the `signer_account` table, the `accountID` column serves as the account ID.
 
 ### 3.3. Hot Database
 
-The *hot database* stores all the data **excluding secret keys** of the managed accounts for online operations such as scanning UTXOs, tracking spent coins, generating unsigned raw transactions, etc. It contains three tables `viewer_account`, `coin` and `tx`:
+The *hot database* stores all the data but **excluding secret seed** of the managed accounts
+for online operations such as scanning UTXOs, tracking spent coins, generating unsigned raw transactions, etc. 
+It contains three tables `viewer_account`, `coin` and `tx`:
 
 ```bash
 sqlite3 ~/.abel4j/demo-testnet-hot-wallet.db
@@ -334,9 +347,7 @@ CREATE TABLE `coin` (`coinIDStr` VARCHAR , `blockHeight` BIGINT , `blockid` VARC
 CREATE TABLE `tx` (`txMd5` VARCHAR , `unsignedRawTxDataHex` VARCHAR , `signerAccountIDs` VARCHAR , `signedRawTxDataHex` VARCHAR , `txid` VARCHAR , `isSubmitted` BOOLEAN , PRIMARY KEY (`txMd5`) );
 ```
 
-In the `view_account` table, the `accountID` column serves as the account ID and corresponds to the one in `signer_account`.
-
-The `viewer_account` table stores all information but the **secret seed** of the managed accounts. 
+Note that in the `view_account` table, the `accountID` column serves as the account ID and corresponds to the one in `signer_account`.
 The schema of the other two tables will be explained when they are used in the following demos.
 
 ## 4. Manage coins in the hot wallet
@@ -358,7 +369,7 @@ Let's check the status of the hot wallet database after running the **ScanCoins*
 bin/abel4j-demo WalletDB
 ```
 
-The output should be like this:
+The output should be:
 
 ```text
 demoName = WalletDB
@@ -374,7 +385,8 @@ Count of txs     : 0
 Count of accounts: 10
 ```
 
-We can see that the `ScanCoins` demo has scanned 6 blocks and found 9 coin belonging to the managed accounts. Let's further check the content of the `coin` table:
+We can see that the `ScanCoins` demo has scanned 6 blocks and found 9 coin belonging to the managed accounts.
+Let's further check the content of the `coin` table:
 
 ```bash
 sqlite3 ~/.abel4j/demo-testnet-hot-wallet.db
@@ -384,7 +396,7 @@ sqlite3 ~/.abel4j/demo-testnet-hot-wallet.db
 sqlite> select coinIDStr, ownerAccountID, value, blockHeight, isSpent from coin;
 ```
 
-The output of the above query is (truncated):
+The (truncated) output of the above query is :
 
 ```text
 3B97B7D0...910A:0|7|999900000|397474|0
@@ -398,7 +410,8 @@ The output of the above query is (truncated):
 3B97B7D0...910A:9|5|999900000|397474|0
 ```
 
-We define `Coin ID` as the combination of the `txid` and the `vout` index of a coin in hex format. The definition ensures that each coin has a unique ID and can be easily located by the ID.
+We define `Coin ID` as the combination of the `txid` and the `vout` index of a coin in hex format. 
+The definition ensures that each coin has a unique ID and can be easily located by the ID.
 
 To understand the meaning of the fields, let's take a closer look at the first coin:
 it belongs to a built-in account (ID 7), has a value of 99.99 ABELs (999,900,000 Neutrinos), 
@@ -406,7 +419,9 @@ is at block 397474, and has not yet been detected as spent.
 
 > **Note**
 > 
-> We can scan the same blocks multiple times without worrying about duplicate coins. The `ScanCoins` demo will only add new coins to the database and ignore the duplicate ones. You may verify this by running the following commands to see if the number of coins in the hot wallet database changes:
+> We can scan the same blocks multiple times without worrying about duplicate coins.
+> The `ScanCoins` demo will only add new coins to the database and ignore the duplicate ones. 
+> You may verify this by running the following commands to see if the number of coins in the hot wallet database changes:
 
 ```bash
 bin/abel4j-demo ScanCoins 397470 397475
@@ -415,9 +430,9 @@ bin/abel4j-demo WalletDB
 
 ### 4.2. Track spent coins
 
-At this point, the **isSpent** field of all the coins in the hot wallet database is still `0`(`false`) because we haven't scanned the blocks that contain the transactions spending the coins. The `TrackSpentCoins` demo shows how to track the spent coins:
-
-# TODO spent coin here
+At this point, the **isSpent** field of all the coins in the hot wallet database is still `0`(`false`) 
+because we haven't scanned the blocks that contain the transactions spending the coins. 
+The `TrackSpentCoins` demo shows how to track the spent coins:
 
 ```bash
 bin/abel4j-demo TrackSpentCoins 397700 
@@ -439,7 +454,8 @@ default.chain = testnet
 💰 Found spent coin: id=3B97B7D0B2D26D254A546CFBBD312BBB9A88910FA23A24D5AC8D4F3A16D6910A:1, value=999900000.
 ```
 
-We can see that there is 2 coin spent in block height 397700. Let's check the `coin` table again:
+We can see that there is 2 coin spent in block height 397700. 
+Let's check the `coin` table again:
 
 ```bash
 sqlite3 ~/.abel4j/demo-testnet-hot-wallet.db
@@ -466,10 +482,11 @@ The output of the above query is:
 We can see there is 2 coins previously found in block height `397474` are now marked as spent while the last (`isSpent`) field of the other coins remain unchanged.
 
 Again, here we choose the `397700` as the tracking heights because we know in advance that there is a consumption transaction at that height.
-Note that, for a regular transaction, there is usually a change output. More that in order to keep the demo running, 
-we point the outputs of that transaction to the address of the built-in account as well.
 
-Let's scan this block `397700` to get the change coin and then check the status of the hot wallet database:
+For a regular transaction, there is usually a change output. More that in order to keep the demo running,
+More importantly, we point the outputs of that transaction to the address of the built-in account as well.
+
+Let's scan this block `397700` to get the more coins and then check the status of the hot wallet database:
 
 ```bash
 bin/abel4j-demo ScanCoins 397700 397700
@@ -492,25 +509,25 @@ Count of txs     : 0
 Count of accounts: 10
 ```
 
-it's worth mentioning that, for a formal application, these two demo can be performed with the specified block at the same time, i.e., tracking spent coins in a block while scanning new coins in the same block.
+it's worth mentioning that, for a formal application, these two demo can be performed with the specified block at the same time,
+i.e., tracking spent coins in a block while scanning new coins in the same block.
 
 ## 5. Make a transaction
 
 Making a transaction is non-trivial task. It may involve many steps:
-- determining the outputs
-- selecting coins to spend
-- determining the transaction fee
-- calculating the change
-- generating the raw transaction
-- signing the raw transaction
-- broadcasting the signed transaction, etc.
+- determining the outputs: identify which addresses to send coins to
+- selecting coins to spend: choose coins from the hot wallet database where isSpent is `0` (`false`)
+- determining the transaction fee: calculate the fee based on the network’s current fee policy
+- calculating the change: add the change address if needed.
+- generating the raw transaction: create the raw (unsigned) transaction data.
+- signing the raw transaction: sign the unsigned transaction
+- broadcasting the signed transaction: submit the signed transaction to the Abelian network. 
+- etc.
 
-Based on our previous work, the complete transaction generation is divided into three demos:
+Based on our previous work, the complete transaction generation process is divided into three demos:
 - firstly, the `GenerateUnsignedRawTx` demo show how to generate an unsigned transaction 
 - then, the `GenerateSignedRawTx` demo show how to sign the unsigned transaction generated by the `GenerateUnsignedRawTx` demo
 - lastly, the `SubmitSignedRawTx` demo shows how to broadcast the signed raw transaction generated by the `GenerateSignedRawTx` demo
-
-Let's dive into the details of those demos now.
 
 ### 5.1. Generate an unsigned raw transaction
 
@@ -524,15 +541,21 @@ bin/abel4j-demo GenerateUnsignedRawTx
 >
 > Please record the value of `txMd5` in the output for later use.
 
-It will generate an unsigned raw transaction with 2 inputs and 2 outputs. The input coins are selected from the coins in the hot wallet database where the **isSpent** field is `0`(`false`). The output coins are generated by the demo itself. Specifically, the receiver addresses are randomly chosen from the built-in accounts and the total output value is calculated by summing up the values of the input coins and subtracting the transaction fee from it.
+It will generate an unsigned raw transaction with 2 inputs and 2 outputs. 
+The input coins are selected from the coins in the hot wallet database where the **isSpent** field is `0`(`false`). 
+The output coins are generated by the demo itself.
+Specifically, the receiver addresses are randomly chosen from the built-in accounts and 
+the total output value is calculated by summing up the values of the input coins and 
+subtracting the transaction fee from it.
 
-The generated unsigned raw transaction will be saved in the `tx` table of the hot wallet database. Let's check the status of the hot wallet database after running the `GenerateUnsignedRawTx` demo:
+The generated unsigned raw transaction will be saved in the `tx` table of the hot wallet database. 
+Let's check the status of the hot wallet database after running the `GenerateUnsignedRawTx` demo:
 
 ```bash
 bin/abel4j-demo WalletDB
 ```
 
-The output should be like this:
+The output should be:
 
 ```text
 demoName = WalletDB
@@ -565,8 +588,8 @@ The output of the above query is like this (you may see different values):
 ```
 
 If recorded the value of `txMd5` in the output of the `GenerateUnsignedRawTx` demo, 
-we can verify that it is the same as the value in the `tx` table. 
-We can also see that the value of `unsignedRawTxDataHex` is not empty and the value of `signedRawTxDataHex` is empty. This is because the signed raw transaction is not generated yet.
+we can verify that it is the same as the value in the `tx` table.
+We can also see that unsignedRawTxDataHex is not empty and signedRawTxDataHex is empty.
 
 ### 5.2. Sign the unsigned raw transaction
 
@@ -599,7 +622,9 @@ Signed raw tx: txid=3C521B53FBE07F3CD5122CCE26814F498BDEBD1F7870FA0105715DB0F0F7
 ==> Saving the signed raw tx to the hot wallet db.
 ```
 
-We pass the `txMd5` as the argument to the demo. It will be used to find the unsigned raw transaction in the `tx` table. The demo will sign the transaction and save the signed data back to the `tx` table.
+We pass the `txMd5` as the argument to the demo. 
+It will be used to find the unsigned raw transaction in the `tx` table. 
+The demo will sign the transaction and save the signed data back to the `tx` table.
 
 Let's check the status of the hot wallet database after running the `GenerateSignedRawTx` demo:
 
@@ -611,7 +636,7 @@ sqlite3 ~/.abel4j/demo-testnet-hot-wallet.db
 sqlite> select txMd5, length(unsignedRawTxDataHex), length(signedRawTxDataHex), isSubmitted from tx;
 ```
 
-Now the output of the above query is like this (you may see different values):
+Now the output of the above query would be like following (you may see different values):
 
 ```text
 0430B1D076C9671622F3378E7056A8C7|2356|76698|0
@@ -638,8 +663,8 @@ If the transaction is successfully submitted, please record the value of `txid` 
 on the [Abelian Explorer for Mainnet](https://explorer.pqabelian.io) or [Abelian Explorer for Testnet](https://testnet-explorer.pqabelian.io/)
 to see if it is confirmed. 
 You may also check the `tx` table to see if the `isSubmitted` field of the transaction is set to `1`(`true`).
-
 If the transaction fails to be submitted, please check the error message in the output. 
+
 The most common error is that one or more coins in the inputs are spent before the transaction is submitted. 
 If you know at which block height the coins are spent, you can run the `TrackSpentCoins` demo to update 
 the `isSpent` field of the coins in the hot wallet database and try to make another unsigned raw transaction, 
@@ -647,7 +672,19 @@ sign it and submit it again.
 
 ## 6. Summary
 
-In this document, we have learned how to install the Abelian SDK for Java, test if it is working properly, understand the concepts of account in the Abelian SDK, separate cold data and hot data to support offline signing, manage coins in the hot wallet and make a transaction with the crafted demos.
+In this document, we have learned how to install the Abelian SDK for Java, test if it is working properly,
+understand the concepts of account in the Abelian SDK, 
+separate cold data and hot data to support offline signing, 
+manage coins in the hot wallet and make a transaction with the crafted demos.
 
-There are other demos in the SDK that are not covered in this document. You may run them yourself to see the results. 
+There are other demos in the SDK that are not covered in this document.
+You may run them yourself to see the results. 
 You may also read the source code of the demos to learn how to use the SDK to develop your own applications.
+
+### Next Steps
+
+- Explore other available demos in the SDK.
+- Read the source code of the demos for advanced usage.
+- Develop your own applications using the Abelian Java SDK.
+
+Happy coding!.
