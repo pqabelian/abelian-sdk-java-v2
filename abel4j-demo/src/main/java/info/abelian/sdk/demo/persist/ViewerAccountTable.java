@@ -1,6 +1,7 @@
 package info.abelian.sdk.demo.persist;
 
 import java.sql.SQLException;
+import java.util.AbstractMap;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
@@ -11,17 +12,17 @@ import com.j256.ormlite.table.TableUtils;
 
 import info.abelian.sdk.common.Bytes;
 import info.abelian.sdk.wallet.ViewAccount;
-import info.abelian.sdk.wallet.PrivacyLevel;
-import info.abelian.sdk.wallet.CryptoSeed.SerialNoKeyRootSeed;
-import info.abelian.sdk.wallet.CryptoSeed.ViewKeyRootSeed;
-import info.abelian.sdk.wallet.CryptoSeed.DetectorRootKey;
+import info.abelian.sdk.common.PrivacyLevel;
+import info.abelian.sdk.common.CryptoSeed.SerialNoSecretRootSeed;
+import info.abelian.sdk.common.CryptoSeed.ViewSecretRootSeed;
+import info.abelian.sdk.common.CryptoSeed.DetectorRootKey;
 
 public class ViewerAccountTable {
 
     @DatabaseTable(tableName = "viewer_account")
     public static class ViewerAccountRow {
-        @DatabaseField(generatedId = true)
-        public int id;
+        @DatabaseField(id = true)
+        public String accountID;
 
         @DatabaseField
         public int chainID;
@@ -39,23 +40,18 @@ public class ViewerAccountTable {
         public ViewerAccountRow() {
         }
 
-        public ViewerAccountRow(int id,int chainID, PrivacyLevel privacyLevel,
+        public ViewerAccountRow(String accountID, int chainID, PrivacyLevel privacyLevel,
                                 String serialNoKeyRootSeed,
                                 String viewKeyRootSeed,
                                 String detectorRootKey) {
-            this.id = id;
+            this.accountID = accountID;
             this.chainID = chainID;
-            this.privacyLevel = privacyLevel.ordinal();
-            this.serialNoKeyRootSeed = serialNoKeyRootSeed;
-            this.viewKeyRootSeed = viewKeyRootSeed;
+            this.privacyLevel = privacyLevel.getValue();
+            if (privacyLevel != PrivacyLevel.PSEUDO_PRIVATE) {
+                this.serialNoKeyRootSeed = serialNoKeyRootSeed;
+                this.viewKeyRootSeed = viewKeyRootSeed;
+            }
             this.detectorRootKey = detectorRootKey;
-        }
-
-        public ViewerAccountRow(ViewAccount viewAccount) {
-            this(viewAccount.getId(),viewAccount.getChainID(), viewAccount.getPrivacyLevel(),
-                    viewAccount.getSerialNoKeyRootSeed().toHex(),
-                    viewAccount.getViewKeyRootSeed().toHex(),
-                    viewAccount.getDetectorRootKey().toHex());
         }
     }
 
@@ -70,26 +66,27 @@ public class ViewerAccountTable {
         return dao.countOf();
     }
 
-    public void addAccountIfNotExists(ViewAccount viewAccount) throws SQLException {
-        if(viewAccount.getPrivacyLevel() == PrivacyLevel.FULLY_PRIVATE){
-            dao.createIfNotExists(new ViewerAccountRow(viewAccount));
-        }else{
-            dao.createIfNotExists(new ViewerAccountRow(viewAccount.getId(),viewAccount.getChainID(),viewAccount.getPrivacyLevel(),
-                    "",
-                    "",
-                    viewAccount.getDetectorRootKey().toHex()));
-        }
+    public void addAccountIfNotExists(String accountID, ViewAccount viewAccount) throws SQLException {
+        PrivacyLevel privacyLevel = viewAccount.getPrivacyLevel();
+        dao.createIfNotExists(new ViewerAccountRow(accountID,
+                viewAccount.getChainID(),
+                privacyLevel,
+                privacyLevel == PrivacyLevel.PSEUDO_PRIVATE ? null : viewAccount.getSerialNoKeyRootSeed().toHex(),
+                privacyLevel == PrivacyLevel.PSEUDO_PRIVATE ? null : viewAccount.getViewKeyRootSeed().toHex(),
+                viewAccount.getDetectorRootKey().toHex()));
     }
 
-    public ViewAccount[] getAllViewerAccounts() throws SQLException {
+    public AbstractMap.SimpleEntry<String,ViewAccount>[] getAllViewerAccounts() throws SQLException {
         ViewerAccountRow[] rows = dao.queryForAll().toArray(new ViewerAccountRow[0]);
-        ViewAccount[] viewAccounts = new ViewAccount[rows.length];
+        AbstractMap.SimpleEntry<String,ViewAccount>[] viewAccounts = new AbstractMap.SimpleEntry[rows.length];
         for (int i = 0; i < rows.length; i++) {
             ViewerAccountRow row = rows[i];
-            viewAccounts[i] = new ViewAccount(row.id,row.chainID,PrivacyLevel.values()[row.privacyLevel],
-                    new SerialNoKeyRootSeed(Bytes.fromHex(row.serialNoKeyRootSeed)),
-                    new ViewKeyRootSeed(Bytes.fromHex(row.viewKeyRootSeed)),
+            PrivacyLevel privacyLevel= PrivacyLevel.fromValue(row.privacyLevel);
+            ViewAccount viewAccount = new ViewAccount(row.chainID, privacyLevel,
+                    privacyLevel == PrivacyLevel.PSEUDO_PRIVATE ? null : new SerialNoSecretRootSeed(Bytes.fromHex(row.serialNoKeyRootSeed)),
+                    privacyLevel == PrivacyLevel.PSEUDO_PRIVATE ? null : new ViewSecretRootSeed(Bytes.fromHex(row.viewKeyRootSeed)),
                     new DetectorRootKey(Bytes.fromHex(row.detectorRootKey)));
+            viewAccounts[i] = new AbstractMap.SimpleEntry<>(row.accountID, viewAccount);
         }
         return viewAccounts;
     }

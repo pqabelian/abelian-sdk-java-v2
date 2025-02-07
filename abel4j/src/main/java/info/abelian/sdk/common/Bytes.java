@@ -57,6 +57,20 @@ public class Bytes {
   public byte[] getData() {
     return data;
   };
+  public Bytes reverse() {
+    int start = 0;
+    int end = data.length - 1;
+
+    byte[] cloned = data.clone();
+    while (start < end) {
+      byte temp = cloned[start];
+      cloned[start] = cloned[end];
+      cloned[end] = temp;
+      start++;
+      end--;
+    }
+    return new Bytes(cloned);
+  }
 
   public int getLength() {
     return data.length;

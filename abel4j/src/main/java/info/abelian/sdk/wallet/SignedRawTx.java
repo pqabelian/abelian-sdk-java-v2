@@ -7,10 +7,10 @@ public class SignedRawTx extends Struct {
   
   public Bytes data;
 
-  public Bytes txid;
+  public String txid;
 
-  public SignedRawTx(Bytes data, Bytes txid) {
+  public SignedRawTx(Bytes data, String txid) {
     this.data = data;
-    this.txid = txid;
+    this.txid  = txid;
   }
 }

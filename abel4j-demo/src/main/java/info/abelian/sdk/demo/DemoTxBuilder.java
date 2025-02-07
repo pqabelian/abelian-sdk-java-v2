@@ -1,20 +1,15 @@
 package info.abelian.sdk.demo;
 
+import java.util.AbstractMap;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import info.abelian.sdk.demo.persist.WalletDB.HotWalletDB;
 import info.abelian.sdk.demo.persist.WalletDB.ColdWalletDB;
+import info.abelian.sdk.wallet.*;
 import info.abelian.sdk.wallet.TxBuilder.TxInDesc;
 import info.abelian.sdk.wallet.TxBuilder.TxOutDesc;
-
-import info.abelian.sdk.wallet.Coin;
-import info.abelian.sdk.wallet.ViewAccount;
-import info.abelian.sdk.wallet.Account;
-import info.abelian.sdk.wallet.TxBuilder;
-import info.abelian.sdk.wallet.ChainViewer;
-import info.abelian.sdk.wallet.UnsignedRawTx;
 
 public class DemoTxBuilder {
 
@@ -29,7 +24,7 @@ public class DemoTxBuilder {
     // STEP 1.
     System.out.printf("\n==> Getting account and coin data from the hot wallet db.\n");
     HotWalletDB db = Demo.getHotWalletDB();
-    ViewAccount[] viewAccounts = db.getAllViewerAccounts();
+    AbstractMap.SimpleEntry<String,ViewAccount>[] viewAccounts = db.getAllViewerAccounts();
     Coin[] coins = db.getAllUnspentCoins();
     System.out.printf("Got %d accounts and %d coins.\n", viewAccounts.length, coins.length);
     if (viewAccounts.length < 2 || coins.length < numInputs) {
@@ -92,7 +87,13 @@ public class DemoTxBuilder {
     // Build the TxOutDesc array.
     TxOutDesc[] outputDescs = new TxOutDesc[numOutputs];
     for (int i = 0; i < numOutputs; i++) {
-      outputDescs[i] = new TxOutDesc(outputAccounts[i].generateAbelAddress(), outputValues[i]);
+      AbelAddress abelAddress;
+      if (outputAccounts[i] instanceof SeqAccount){
+        abelAddress = ((SeqAccount) outputAccounts[i]).generateAbelAddress(0); // always use 0-th address for sequence account
+      }else{
+        abelAddress = outputAccounts[i].generateAbelAddress();
+      }
+      outputDescs[i] = new TxOutDesc(abelAddress, outputValues[i]);
     }
 
     // Build the unsigned raw tx and save it in the hot wallet db.

@@ -22,7 +22,7 @@ public class DemoTxSubmitter {
       System.out.printf("Signed raw tx not found.\n");
       return;
     }
-    System.out.printf("txid: %s\n", signedRawTx.txid.toHex());
+    System.out.printf("txid: %s\n", signedRawTx.txid);
     System.out.printf("data: %s\n", signedRawTx.data);
 
     System.out.printf("\n==> Submitting the signed raw tx.\n");

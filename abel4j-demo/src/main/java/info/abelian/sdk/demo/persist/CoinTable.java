@@ -34,6 +34,8 @@ public class CoinTable {
     @DatabaseField
     public long value;
     @DatabaseField
+    String ownerAccountID;
+    @DatabaseField
     public String snHex;
 
     @DatabaseField
@@ -42,21 +44,23 @@ public class CoinTable {
     public CoinRow() {
     }
 
-    public CoinRow(int txVersion,CoinID coinID, Bytes data,long value,
-                   long blockHeight,Bytes blockid, String snHex, boolean isSpent) {
+    public CoinRow(int txVersion, CoinID coinID, Bytes data, long value,
+                   long blockHeight, Bytes blockid,
+                   String ownerAccountID, String snHex, boolean isSpent) {
       this.txVersion = txVersion;
       this.coinIDStr = coinID.toString();
       this.data = data.toHex();
       this.value = value;
       this.blockid = blockid.toHex();
       this.blockHeight = blockHeight;
+      this.ownerAccountID = ownerAccountID;
       this.snHex = snHex;
       this.isSpent = isSpent;
     }
 
-    public CoinRow(Coin coin) {
+    public CoinRow(Coin coin,String ownerAccountID) {
       this(coin.txVersion, coin.id, coin.txOutData,coin.value, coin.blockHeight,coin.blockid,
-          coin.serialNumber == null ? null : coin.serialNumber.toHex(), false);
+              ownerAccountID,coin.serialNumber == null ? null : coin.serialNumber.toHex(), false);
     }
 
     public CoinID getCoinID() {
@@ -76,11 +80,11 @@ public class CoinTable {
     return dao.countOf();
   }
 
-  public void addCoinIfNotExists(Coin coin) throws SQLException {
+  public void addCoinIfNotExists(Coin coin,String ownerAccountID) throws SQLException {
     if (dao.idExists(coin.id.toString())) {
       return;
     }
-    dao.createIfNotExists(new CoinRow(coin));
+    dao.createIfNotExists(new CoinRow(coin,ownerAccountID));
   }
 
   public Coin[] getAllUnspentCoins() throws SQLException {

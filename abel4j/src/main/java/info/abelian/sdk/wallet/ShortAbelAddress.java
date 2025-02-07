@@ -1,4 +1,8 @@
-package info.abelian.sdk.common;
+package info.abelian.sdk.wallet;
+
+import info.abelian.sdk.common.Address;
+import info.abelian.sdk.common.Bytes;
+import info.abelian.sdk.common.Fingerprint;
 
 public class ShortAbelAddress extends Address {
     public ShortAbelAddress(byte[] data) {

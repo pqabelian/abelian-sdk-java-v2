@@ -1,7 +1,5 @@
 package info.abelian.sdk.common;
 
-import com.sun.tools.javac.util.ArrayUtils;
-
 import java.util.Arrays;
 
 public abstract class Address extends Bytes {

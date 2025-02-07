@@ -1985,6 +1985,7018 @@ public final class Core {
 
   }
 
+  public interface GenerateEntropySeedArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.GenerateEntropySeedArgs)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code core.GenerateEntropySeedArgs}
+   */
+  public static final class GenerateEntropySeedArgs extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.GenerateEntropySeedArgs)
+      GenerateEntropySeedArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        GenerateEntropySeedArgs.class.getName());
+    }
+    // Use GenerateEntropySeedArgs.newBuilder() to construct.
+    private GenerateEntropySeedArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GenerateEntropySeedArgs() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.GenerateEntropySeedArgs.class, info.abelian.sdk.proto.Core.GenerateEntropySeedArgs.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.GenerateEntropySeedArgs)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.GenerateEntropySeedArgs other = (info.abelian.sdk.proto.Core.GenerateEntropySeedArgs) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.GenerateEntropySeedArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.GenerateEntropySeedArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.GenerateEntropySeedArgs)
+        info.abelian.sdk.proto.Core.GenerateEntropySeedArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.GenerateEntropySeedArgs.class, info.abelian.sdk.proto.Core.GenerateEntropySeedArgs.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.GenerateEntropySeedArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.GenerateEntropySeedArgs getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.GenerateEntropySeedArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.GenerateEntropySeedArgs build() {
+        info.abelian.sdk.proto.Core.GenerateEntropySeedArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.GenerateEntropySeedArgs buildPartial() {
+        info.abelian.sdk.proto.Core.GenerateEntropySeedArgs result = new info.abelian.sdk.proto.Core.GenerateEntropySeedArgs(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.GenerateEntropySeedArgs) {
+          return mergeFrom((info.abelian.sdk.proto.Core.GenerateEntropySeedArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.GenerateEntropySeedArgs other) {
+        if (other == info.abelian.sdk.proto.Core.GenerateEntropySeedArgs.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.GenerateEntropySeedArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.GenerateEntropySeedArgs)
+    private static final info.abelian.sdk.proto.Core.GenerateEntropySeedArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.GenerateEntropySeedArgs();
+    }
+
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenerateEntropySeedArgs>
+        PARSER = new com.google.protobuf.AbstractParser<GenerateEntropySeedArgs>() {
+      @java.lang.Override
+      public GenerateEntropySeedArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenerateEntropySeedArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenerateEntropySeedArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.GenerateEntropySeedArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenerateEntropySeedResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.GenerateEntropySeedResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    com.google.protobuf.ByteString getEntropySeed();
+  }
+  /**
+   * Protobuf type {@code core.GenerateEntropySeedResult}
+   */
+  public static final class GenerateEntropySeedResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.GenerateEntropySeedResult)
+      GenerateEntropySeedResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        GenerateEntropySeedResult.class.getName());
+    }
+    // Use GenerateEntropySeedResult.newBuilder() to construct.
+    private GenerateEntropySeedResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GenerateEntropySeedResult() {
+      entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.GenerateEntropySeedResult.class, info.abelian.sdk.proto.Core.GenerateEntropySeedResult.Builder.class);
+    }
+
+    public static final int ENTROPYSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEntropySeed() {
+      return entropySeed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!entropySeed_.isEmpty()) {
+        output.writeBytes(1, entropySeed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!entropySeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, entropySeed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.GenerateEntropySeedResult)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.GenerateEntropySeedResult other = (info.abelian.sdk.proto.Core.GenerateEntropySeedResult) obj;
+
+      if (!getEntropySeed()
+          .equals(other.getEntropySeed())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTROPYSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getEntropySeed().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.GenerateEntropySeedResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.GenerateEntropySeedResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.GenerateEntropySeedResult)
+        info.abelian.sdk.proto.Core.GenerateEntropySeedResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.GenerateEntropySeedResult.class, info.abelian.sdk.proto.Core.GenerateEntropySeedResult.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.GenerateEntropySeedResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_GenerateEntropySeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.GenerateEntropySeedResult getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.GenerateEntropySeedResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.GenerateEntropySeedResult build() {
+        info.abelian.sdk.proto.Core.GenerateEntropySeedResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.GenerateEntropySeedResult buildPartial() {
+        info.abelian.sdk.proto.Core.GenerateEntropySeedResult result = new info.abelian.sdk.proto.Core.GenerateEntropySeedResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.GenerateEntropySeedResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entropySeed_ = entropySeed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.GenerateEntropySeedResult) {
+          return mergeFrom((info.abelian.sdk.proto.Core.GenerateEntropySeedResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.GenerateEntropySeedResult other) {
+        if (other == info.abelian.sdk.proto.Core.GenerateEntropySeedResult.getDefaultInstance()) return this;
+        if (other.getEntropySeed() != com.google.protobuf.ByteString.EMPTY) {
+          setEntropySeed(other.getEntropySeed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                entropySeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return The entropySeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEntropySeed() {
+        return entropySeed_;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @param value The entropySeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntropySeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        entropySeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntropySeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entropySeed_ = getDefaultInstance().getEntropySeed();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.GenerateEntropySeedResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.GenerateEntropySeedResult)
+    private static final info.abelian.sdk.proto.Core.GenerateEntropySeedResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.GenerateEntropySeedResult();
+    }
+
+    public static info.abelian.sdk.proto.Core.GenerateEntropySeedResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenerateEntropySeedResult>
+        PARSER = new com.google.protobuf.AbstractParser<GenerateEntropySeedResult>() {
+      @java.lang.Override
+      public GenerateEntropySeedResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenerateEntropySeedResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenerateEntropySeedResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.GenerateEntropySeedResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EntropySeedToMnemonicsArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.EntropySeedToMnemonicsArgs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    com.google.protobuf.ByteString getEntropySeed();
+  }
+  /**
+   * Protobuf type {@code core.EntropySeedToMnemonicsArgs}
+   */
+  public static final class EntropySeedToMnemonicsArgs extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.EntropySeedToMnemonicsArgs)
+      EntropySeedToMnemonicsArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        EntropySeedToMnemonicsArgs.class.getName());
+    }
+    // Use EntropySeedToMnemonicsArgs.newBuilder() to construct.
+    private EntropySeedToMnemonicsArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EntropySeedToMnemonicsArgs() {
+      entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs.class, info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs.Builder.class);
+    }
+
+    public static final int ENTROPYSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEntropySeed() {
+      return entropySeed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!entropySeed_.isEmpty()) {
+        output.writeBytes(1, entropySeed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!entropySeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, entropySeed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs other = (info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs) obj;
+
+      if (!getEntropySeed()
+          .equals(other.getEntropySeed())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTROPYSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getEntropySeed().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.EntropySeedToMnemonicsArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.EntropySeedToMnemonicsArgs)
+        info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs.class, info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs build() {
+        info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs buildPartial() {
+        info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs result = new info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entropySeed_ = entropySeed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs) {
+          return mergeFrom((info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs other) {
+        if (other == info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs.getDefaultInstance()) return this;
+        if (other.getEntropySeed() != com.google.protobuf.ByteString.EMPTY) {
+          setEntropySeed(other.getEntropySeed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                entropySeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return The entropySeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEntropySeed() {
+        return entropySeed_;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @param value The entropySeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntropySeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        entropySeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntropySeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entropySeed_ = getDefaultInstance().getEntropySeed();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.EntropySeedToMnemonicsArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.EntropySeedToMnemonicsArgs)
+    private static final info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs();
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EntropySeedToMnemonicsArgs>
+        PARSER = new com.google.protobuf.AbstractParser<EntropySeedToMnemonicsArgs>() {
+      @java.lang.Override
+      public EntropySeedToMnemonicsArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EntropySeedToMnemonicsArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EntropySeedToMnemonicsArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.EntropySeedToMnemonicsArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EntropySeedToMnemonicsResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.EntropySeedToMnemonicsResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return A list containing the mnemonic.
+     */
+    java.util.List<java.lang.String>
+        getMnemonicList();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return The count of mnemonic.
+     */
+    int getMnemonicCount();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the element to return.
+     * @return The mnemonic at the given index.
+     */
+    java.lang.String getMnemonic(int index);
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the mnemonic at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMnemonicBytes(int index);
+  }
+  /**
+   * Protobuf type {@code core.EntropySeedToMnemonicsResult}
+   */
+  public static final class EntropySeedToMnemonicsResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.EntropySeedToMnemonicsResult)
+      EntropySeedToMnemonicsResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        EntropySeedToMnemonicsResult.class.getName());
+    }
+    // Use EntropySeedToMnemonicsResult.newBuilder() to construct.
+    private EntropySeedToMnemonicsResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EntropySeedToMnemonicsResult() {
+      mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult.class, info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult.Builder.class);
+    }
+
+    public static final int MNEMONIC_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList mnemonic_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return A list containing the mnemonic.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMnemonicList() {
+      return mnemonic_;
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return The count of mnemonic.
+     */
+    public int getMnemonicCount() {
+      return mnemonic_.size();
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the element to return.
+     * @return The mnemonic at the given index.
+     */
+    public java.lang.String getMnemonic(int index) {
+      return mnemonic_.get(index);
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the mnemonic at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMnemonicBytes(int index) {
+      return mnemonic_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < mnemonic_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, mnemonic_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < mnemonic_.size(); i++) {
+          dataSize += computeStringSizeNoTag(mnemonic_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMnemonicList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult other = (info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult) obj;
+
+      if (!getMnemonicList()
+          .equals(other.getMnemonicList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMnemonicCount() > 0) {
+        hash = (37 * hash) + MNEMONIC_FIELD_NUMBER;
+        hash = (53 * hash) + getMnemonicList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.EntropySeedToMnemonicsResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.EntropySeedToMnemonicsResult)
+        info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult.class, info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mnemonic_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToMnemonicsResult_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult build() {
+        info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult buildPartial() {
+        info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult result = new info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          mnemonic_.makeImmutable();
+          result.mnemonic_ = mnemonic_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult) {
+          return mergeFrom((info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult other) {
+        if (other == info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult.getDefaultInstance()) return this;
+        if (!other.mnemonic_.isEmpty()) {
+          if (mnemonic_.isEmpty()) {
+            mnemonic_ = other.mnemonic_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureMnemonicIsMutable();
+            mnemonic_.addAll(other.mnemonic_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMnemonicIsMutable();
+                mnemonic_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMnemonicIsMutable() {
+        if (!mnemonic_.isModifiable()) {
+          mnemonic_ = new com.google.protobuf.LazyStringArrayList(mnemonic_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return A list containing the mnemonic.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMnemonicList() {
+        mnemonic_.makeImmutable();
+        return mnemonic_;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return The count of mnemonic.
+       */
+      public int getMnemonicCount() {
+        return mnemonic_.size();
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index of the element to return.
+       * @return The mnemonic at the given index.
+       */
+      public java.lang.String getMnemonic(int index) {
+        return mnemonic_.get(index);
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the mnemonic at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMnemonicBytes(int index) {
+        return mnemonic_.getByteString(index);
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The mnemonic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMnemonic(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMnemonicIsMutable();
+        mnemonic_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param value The mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMnemonic(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMnemonicIsMutable();
+        mnemonic_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param values The mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMnemonic(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMnemonicIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mnemonic_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMnemonic() {
+        mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param value The bytes of the mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMnemonicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMnemonicIsMutable();
+        mnemonic_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.EntropySeedToMnemonicsResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.EntropySeedToMnemonicsResult)
+    private static final info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult();
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EntropySeedToMnemonicsResult>
+        PARSER = new com.google.protobuf.AbstractParser<EntropySeedToMnemonicsResult>() {
+      @java.lang.Override
+      public EntropySeedToMnemonicsResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EntropySeedToMnemonicsResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EntropySeedToMnemonicsResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.EntropySeedToMnemonicsResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MnemonicsToEntropySeedArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.MnemonicsToEntropySeedArgs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return A list containing the mnemonic.
+     */
+    java.util.List<java.lang.String>
+        getMnemonicList();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return The count of mnemonic.
+     */
+    int getMnemonicCount();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the element to return.
+     * @return The mnemonic at the given index.
+     */
+    java.lang.String getMnemonic(int index);
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the mnemonic at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMnemonicBytes(int index);
+  }
+  /**
+   * Protobuf type {@code core.MnemonicsToEntropySeedArgs}
+   */
+  public static final class MnemonicsToEntropySeedArgs extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.MnemonicsToEntropySeedArgs)
+      MnemonicsToEntropySeedArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        MnemonicsToEntropySeedArgs.class.getName());
+    }
+    // Use MnemonicsToEntropySeedArgs.newBuilder() to construct.
+    private MnemonicsToEntropySeedArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MnemonicsToEntropySeedArgs() {
+      mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs.class, info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs.Builder.class);
+    }
+
+    public static final int MNEMONIC_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList mnemonic_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return A list containing the mnemonic.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMnemonicList() {
+      return mnemonic_;
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return The count of mnemonic.
+     */
+    public int getMnemonicCount() {
+      return mnemonic_.size();
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the element to return.
+     * @return The mnemonic at the given index.
+     */
+    public java.lang.String getMnemonic(int index) {
+      return mnemonic_.get(index);
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the mnemonic at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMnemonicBytes(int index) {
+      return mnemonic_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < mnemonic_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, mnemonic_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < mnemonic_.size(); i++) {
+          dataSize += computeStringSizeNoTag(mnemonic_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMnemonicList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs other = (info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs) obj;
+
+      if (!getMnemonicList()
+          .equals(other.getMnemonicList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMnemonicCount() > 0) {
+        hash = (37 * hash) + MNEMONIC_FIELD_NUMBER;
+        hash = (53 * hash) + getMnemonicList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.MnemonicsToEntropySeedArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.MnemonicsToEntropySeedArgs)
+        info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs.class, info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mnemonic_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs build() {
+        info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs buildPartial() {
+        info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs result = new info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          mnemonic_.makeImmutable();
+          result.mnemonic_ = mnemonic_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs) {
+          return mergeFrom((info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs other) {
+        if (other == info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs.getDefaultInstance()) return this;
+        if (!other.mnemonic_.isEmpty()) {
+          if (mnemonic_.isEmpty()) {
+            mnemonic_ = other.mnemonic_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureMnemonicIsMutable();
+            mnemonic_.addAll(other.mnemonic_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMnemonicIsMutable();
+                mnemonic_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMnemonicIsMutable() {
+        if (!mnemonic_.isModifiable()) {
+          mnemonic_ = new com.google.protobuf.LazyStringArrayList(mnemonic_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return A list containing the mnemonic.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMnemonicList() {
+        mnemonic_.makeImmutable();
+        return mnemonic_;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return The count of mnemonic.
+       */
+      public int getMnemonicCount() {
+        return mnemonic_.size();
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index of the element to return.
+       * @return The mnemonic at the given index.
+       */
+      public java.lang.String getMnemonic(int index) {
+        return mnemonic_.get(index);
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the mnemonic at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMnemonicBytes(int index) {
+        return mnemonic_.getByteString(index);
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The mnemonic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMnemonic(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMnemonicIsMutable();
+        mnemonic_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param value The mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMnemonic(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMnemonicIsMutable();
+        mnemonic_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param values The mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMnemonic(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMnemonicIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mnemonic_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMnemonic() {
+        mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param value The bytes of the mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMnemonicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMnemonicIsMutable();
+        mnemonic_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.MnemonicsToEntropySeedArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.MnemonicsToEntropySeedArgs)
+    private static final info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs();
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MnemonicsToEntropySeedArgs>
+        PARSER = new com.google.protobuf.AbstractParser<MnemonicsToEntropySeedArgs>() {
+      @java.lang.Override
+      public MnemonicsToEntropySeedArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MnemonicsToEntropySeedArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MnemonicsToEntropySeedArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.MnemonicsToEntropySeedArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MnemonicsToEntropySeedResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.MnemonicsToEntropySeedResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    com.google.protobuf.ByteString getEntropySeed();
+  }
+  /**
+   * Protobuf type {@code core.MnemonicsToEntropySeedResult}
+   */
+  public static final class MnemonicsToEntropySeedResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.MnemonicsToEntropySeedResult)
+      MnemonicsToEntropySeedResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        MnemonicsToEntropySeedResult.class.getName());
+    }
+    // Use MnemonicsToEntropySeedResult.newBuilder() to construct.
+    private MnemonicsToEntropySeedResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MnemonicsToEntropySeedResult() {
+      entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult.class, info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult.Builder.class);
+    }
+
+    public static final int ENTROPYSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEntropySeed() {
+      return entropySeed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!entropySeed_.isEmpty()) {
+        output.writeBytes(1, entropySeed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!entropySeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, entropySeed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult other = (info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult) obj;
+
+      if (!getEntropySeed()
+          .equals(other.getEntropySeed())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTROPYSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getEntropySeed().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.MnemonicsToEntropySeedResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.MnemonicsToEntropySeedResult)
+        info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult.class, info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToEntropySeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult build() {
+        info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult buildPartial() {
+        info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult result = new info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entropySeed_ = entropySeed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult) {
+          return mergeFrom((info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult other) {
+        if (other == info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult.getDefaultInstance()) return this;
+        if (other.getEntropySeed() != com.google.protobuf.ByteString.EMPTY) {
+          setEntropySeed(other.getEntropySeed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                entropySeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return The entropySeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEntropySeed() {
+        return entropySeed_;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @param value The entropySeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntropySeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        entropySeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntropySeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entropySeed_ = getDefaultInstance().getEntropySeed();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.MnemonicsToEntropySeedResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.MnemonicsToEntropySeedResult)
+    private static final info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult();
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MnemonicsToEntropySeedResult>
+        PARSER = new com.google.protobuf.AbstractParser<MnemonicsToEntropySeedResult>() {
+      @java.lang.Override
+      public MnemonicsToEntropySeedResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MnemonicsToEntropySeedResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MnemonicsToEntropySeedResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.MnemonicsToEntropySeedResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EntropySeedToCryptoSeedArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.EntropySeedToCryptoSeedArgs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    com.google.protobuf.ByteString getEntropySeed();
+  }
+  /**
+   * Protobuf type {@code core.EntropySeedToCryptoSeedArgs}
+   */
+  public static final class EntropySeedToCryptoSeedArgs extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.EntropySeedToCryptoSeedArgs)
+      EntropySeedToCryptoSeedArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        EntropySeedToCryptoSeedArgs.class.getName());
+    }
+    // Use EntropySeedToCryptoSeedArgs.newBuilder() to construct.
+    private EntropySeedToCryptoSeedArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EntropySeedToCryptoSeedArgs() {
+      entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs.class, info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs.Builder.class);
+    }
+
+    public static final int ENTROPYSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEntropySeed() {
+      return entropySeed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!entropySeed_.isEmpty()) {
+        output.writeBytes(1, entropySeed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!entropySeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, entropySeed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs other = (info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs) obj;
+
+      if (!getEntropySeed()
+          .equals(other.getEntropySeed())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTROPYSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getEntropySeed().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.EntropySeedToCryptoSeedArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.EntropySeedToCryptoSeedArgs)
+        info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs.class, info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs build() {
+        info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs buildPartial() {
+        info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs result = new info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entropySeed_ = entropySeed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs) {
+          return mergeFrom((info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs other) {
+        if (other == info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs.getDefaultInstance()) return this;
+        if (other.getEntropySeed() != com.google.protobuf.ByteString.EMPTY) {
+          setEntropySeed(other.getEntropySeed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                entropySeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return The entropySeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEntropySeed() {
+        return entropySeed_;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @param value The entropySeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntropySeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        entropySeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntropySeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entropySeed_ = getDefaultInstance().getEntropySeed();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.EntropySeedToCryptoSeedArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.EntropySeedToCryptoSeedArgs)
+    private static final info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs();
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EntropySeedToCryptoSeedArgs>
+        PARSER = new com.google.protobuf.AbstractParser<EntropySeedToCryptoSeedArgs>() {
+      @java.lang.Override
+      public EntropySeedToCryptoSeedArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EntropySeedToCryptoSeedArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EntropySeedToCryptoSeedArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EntropySeedToCryptoSeedResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.EntropySeedToCryptoSeedResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes spendKeyRootSeed = 1;</code>
+     * @return The spendKeyRootSeed.
+     */
+    com.google.protobuf.ByteString getSpendKeyRootSeed();
+
+    /**
+     * <code>bytes serialNoKeyRootSeed = 2;</code>
+     * @return The serialNoKeyRootSeed.
+     */
+    com.google.protobuf.ByteString getSerialNoKeyRootSeed();
+
+    /**
+     * <code>bytes viewKeyRootSeed = 3;</code>
+     * @return The viewKeyRootSeed.
+     */
+    com.google.protobuf.ByteString getViewKeyRootSeed();
+
+    /**
+     * <code>bytes detectorRootKey = 4;</code>
+     * @return The detectorRootKey.
+     */
+    com.google.protobuf.ByteString getDetectorRootKey();
+  }
+  /**
+   * Protobuf type {@code core.EntropySeedToCryptoSeedResult}
+   */
+  public static final class EntropySeedToCryptoSeedResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.EntropySeedToCryptoSeedResult)
+      EntropySeedToCryptoSeedResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        EntropySeedToCryptoSeedResult.class.getName());
+    }
+    // Use EntropySeedToCryptoSeedResult.newBuilder() to construct.
+    private EntropySeedToCryptoSeedResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EntropySeedToCryptoSeedResult() {
+      spendKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      serialNoKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      viewKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      detectorRootKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult.class, info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult.Builder.class);
+    }
+
+    public static final int SPENDKEYROOTSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString spendKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes spendKeyRootSeed = 1;</code>
+     * @return The spendKeyRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpendKeyRootSeed() {
+      return spendKeyRootSeed_;
+    }
+
+    public static final int SERIALNOKEYROOTSEED_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString serialNoKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes serialNoKeyRootSeed = 2;</code>
+     * @return The serialNoKeyRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSerialNoKeyRootSeed() {
+      return serialNoKeyRootSeed_;
+    }
+
+    public static final int VIEWKEYROOTSEED_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString viewKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes viewKeyRootSeed = 3;</code>
+     * @return The viewKeyRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getViewKeyRootSeed() {
+      return viewKeyRootSeed_;
+    }
+
+    public static final int DETECTORROOTKEY_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString detectorRootKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes detectorRootKey = 4;</code>
+     * @return The detectorRootKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDetectorRootKey() {
+      return detectorRootKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!spendKeyRootSeed_.isEmpty()) {
+        output.writeBytes(1, spendKeyRootSeed_);
+      }
+      if (!serialNoKeyRootSeed_.isEmpty()) {
+        output.writeBytes(2, serialNoKeyRootSeed_);
+      }
+      if (!viewKeyRootSeed_.isEmpty()) {
+        output.writeBytes(3, viewKeyRootSeed_);
+      }
+      if (!detectorRootKey_.isEmpty()) {
+        output.writeBytes(4, detectorRootKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!spendKeyRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, spendKeyRootSeed_);
+      }
+      if (!serialNoKeyRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, serialNoKeyRootSeed_);
+      }
+      if (!viewKeyRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, viewKeyRootSeed_);
+      }
+      if (!detectorRootKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, detectorRootKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult other = (info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult) obj;
+
+      if (!getSpendKeyRootSeed()
+          .equals(other.getSpendKeyRootSeed())) return false;
+      if (!getSerialNoKeyRootSeed()
+          .equals(other.getSerialNoKeyRootSeed())) return false;
+      if (!getViewKeyRootSeed()
+          .equals(other.getViewKeyRootSeed())) return false;
+      if (!getDetectorRootKey()
+          .equals(other.getDetectorRootKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPENDKEYROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getSpendKeyRootSeed().hashCode();
+      hash = (37 * hash) + SERIALNOKEYROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getSerialNoKeyRootSeed().hashCode();
+      hash = (37 * hash) + VIEWKEYROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getViewKeyRootSeed().hashCode();
+      hash = (37 * hash) + DETECTORROOTKEY_FIELD_NUMBER;
+      hash = (53 * hash) + getDetectorRootKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.EntropySeedToCryptoSeedResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.EntropySeedToCryptoSeedResult)
+        info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult.class, info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        spendKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        serialNoKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        viewKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        detectorRootKey_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToCryptoSeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult build() {
+        info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult buildPartial() {
+        info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult result = new info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.spendKeyRootSeed_ = spendKeyRootSeed_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.serialNoKeyRootSeed_ = serialNoKeyRootSeed_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.viewKeyRootSeed_ = viewKeyRootSeed_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.detectorRootKey_ = detectorRootKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult) {
+          return mergeFrom((info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult other) {
+        if (other == info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult.getDefaultInstance()) return this;
+        if (other.getSpendKeyRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setSpendKeyRootSeed(other.getSpendKeyRootSeed());
+        }
+        if (other.getSerialNoKeyRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setSerialNoKeyRootSeed(other.getSerialNoKeyRootSeed());
+        }
+        if (other.getViewKeyRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setViewKeyRootSeed(other.getViewKeyRootSeed());
+        }
+        if (other.getDetectorRootKey() != com.google.protobuf.ByteString.EMPTY) {
+          setDetectorRootKey(other.getDetectorRootKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                spendKeyRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                serialNoKeyRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                viewKeyRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                detectorRootKey_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString spendKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes spendKeyRootSeed = 1;</code>
+       * @return The spendKeyRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpendKeyRootSeed() {
+        return spendKeyRootSeed_;
+      }
+      /**
+       * <code>bytes spendKeyRootSeed = 1;</code>
+       * @param value The spendKeyRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendKeyRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        spendKeyRootSeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes spendKeyRootSeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpendKeyRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        spendKeyRootSeed_ = getDefaultInstance().getSpendKeyRootSeed();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString serialNoKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes serialNoKeyRootSeed = 2;</code>
+       * @return The serialNoKeyRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSerialNoKeyRootSeed() {
+        return serialNoKeyRootSeed_;
+      }
+      /**
+       * <code>bytes serialNoKeyRootSeed = 2;</code>
+       * @param value The serialNoKeyRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSerialNoKeyRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        serialNoKeyRootSeed_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes serialNoKeyRootSeed = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSerialNoKeyRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        serialNoKeyRootSeed_ = getDefaultInstance().getSerialNoKeyRootSeed();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString viewKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes viewKeyRootSeed = 3;</code>
+       * @return The viewKeyRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getViewKeyRootSeed() {
+        return viewKeyRootSeed_;
+      }
+      /**
+       * <code>bytes viewKeyRootSeed = 3;</code>
+       * @param value The viewKeyRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setViewKeyRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        viewKeyRootSeed_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes viewKeyRootSeed = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearViewKeyRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        viewKeyRootSeed_ = getDefaultInstance().getViewKeyRootSeed();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString detectorRootKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes detectorRootKey = 4;</code>
+       * @return The detectorRootKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDetectorRootKey() {
+        return detectorRootKey_;
+      }
+      /**
+       * <code>bytes detectorRootKey = 4;</code>
+       * @param value The detectorRootKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetectorRootKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        detectorRootKey_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes detectorRootKey = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDetectorRootKey() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        detectorRootKey_ = getDefaultInstance().getDetectorRootKey();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.EntropySeedToCryptoSeedResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.EntropySeedToCryptoSeedResult)
+    private static final info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult();
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EntropySeedToCryptoSeedResult>
+        PARSER = new com.google.protobuf.AbstractParser<EntropySeedToCryptoSeedResult>() {
+      @java.lang.Override
+      public EntropySeedToCryptoSeedResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EntropySeedToCryptoSeedResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EntropySeedToCryptoSeedResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.EntropySeedToCryptoSeedResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MnemonicsToCryptoSeedArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.MnemonicsToCryptoSeedArgs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return A list containing the mnemonic.
+     */
+    java.util.List<java.lang.String>
+        getMnemonicList();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return The count of mnemonic.
+     */
+    int getMnemonicCount();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the element to return.
+     * @return The mnemonic at the given index.
+     */
+    java.lang.String getMnemonic(int index);
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the mnemonic at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMnemonicBytes(int index);
+  }
+  /**
+   * Protobuf type {@code core.MnemonicsToCryptoSeedArgs}
+   */
+  public static final class MnemonicsToCryptoSeedArgs extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.MnemonicsToCryptoSeedArgs)
+      MnemonicsToCryptoSeedArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        MnemonicsToCryptoSeedArgs.class.getName());
+    }
+    // Use MnemonicsToCryptoSeedArgs.newBuilder() to construct.
+    private MnemonicsToCryptoSeedArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MnemonicsToCryptoSeedArgs() {
+      mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs.class, info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs.Builder.class);
+    }
+
+    public static final int MNEMONIC_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList mnemonic_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return A list containing the mnemonic.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMnemonicList() {
+      return mnemonic_;
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return The count of mnemonic.
+     */
+    public int getMnemonicCount() {
+      return mnemonic_.size();
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the element to return.
+     * @return The mnemonic at the given index.
+     */
+    public java.lang.String getMnemonic(int index) {
+      return mnemonic_.get(index);
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the mnemonic at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMnemonicBytes(int index) {
+      return mnemonic_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < mnemonic_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, mnemonic_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < mnemonic_.size(); i++) {
+          dataSize += computeStringSizeNoTag(mnemonic_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMnemonicList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs other = (info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs) obj;
+
+      if (!getMnemonicList()
+          .equals(other.getMnemonicList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMnemonicCount() > 0) {
+        hash = (37 * hash) + MNEMONIC_FIELD_NUMBER;
+        hash = (53 * hash) + getMnemonicList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.MnemonicsToCryptoSeedArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.MnemonicsToCryptoSeedArgs)
+        info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs.class, info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mnemonic_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs build() {
+        info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs buildPartial() {
+        info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs result = new info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          mnemonic_.makeImmutable();
+          result.mnemonic_ = mnemonic_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs) {
+          return mergeFrom((info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs other) {
+        if (other == info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs.getDefaultInstance()) return this;
+        if (!other.mnemonic_.isEmpty()) {
+          if (mnemonic_.isEmpty()) {
+            mnemonic_ = other.mnemonic_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureMnemonicIsMutable();
+            mnemonic_.addAll(other.mnemonic_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMnemonicIsMutable();
+                mnemonic_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMnemonicIsMutable() {
+        if (!mnemonic_.isModifiable()) {
+          mnemonic_ = new com.google.protobuf.LazyStringArrayList(mnemonic_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return A list containing the mnemonic.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMnemonicList() {
+        mnemonic_.makeImmutable();
+        return mnemonic_;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return The count of mnemonic.
+       */
+      public int getMnemonicCount() {
+        return mnemonic_.size();
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index of the element to return.
+       * @return The mnemonic at the given index.
+       */
+      public java.lang.String getMnemonic(int index) {
+        return mnemonic_.get(index);
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the mnemonic at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMnemonicBytes(int index) {
+        return mnemonic_.getByteString(index);
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The mnemonic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMnemonic(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMnemonicIsMutable();
+        mnemonic_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param value The mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMnemonic(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMnemonicIsMutable();
+        mnemonic_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param values The mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMnemonic(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMnemonicIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mnemonic_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMnemonic() {
+        mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param value The bytes of the mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMnemonicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMnemonicIsMutable();
+        mnemonic_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.MnemonicsToCryptoSeedArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.MnemonicsToCryptoSeedArgs)
+    private static final info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs();
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MnemonicsToCryptoSeedArgs>
+        PARSER = new com.google.protobuf.AbstractParser<MnemonicsToCryptoSeedArgs>() {
+      @java.lang.Override
+      public MnemonicsToCryptoSeedArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MnemonicsToCryptoSeedArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MnemonicsToCryptoSeedArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MnemonicsToCryptoSeedResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.MnemonicsToCryptoSeedResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes spendKeyRootSeed = 1;</code>
+     * @return The spendKeyRootSeed.
+     */
+    com.google.protobuf.ByteString getSpendKeyRootSeed();
+
+    /**
+     * <code>bytes serialNoKeyRootSeed = 2;</code>
+     * @return The serialNoKeyRootSeed.
+     */
+    com.google.protobuf.ByteString getSerialNoKeyRootSeed();
+
+    /**
+     * <code>bytes viewKeyRootSeed = 3;</code>
+     * @return The viewKeyRootSeed.
+     */
+    com.google.protobuf.ByteString getViewKeyRootSeed();
+
+    /**
+     * <code>bytes detectorRootKey = 4;</code>
+     * @return The detectorRootKey.
+     */
+    com.google.protobuf.ByteString getDetectorRootKey();
+  }
+  /**
+   * Protobuf type {@code core.MnemonicsToCryptoSeedResult}
+   */
+  public static final class MnemonicsToCryptoSeedResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.MnemonicsToCryptoSeedResult)
+      MnemonicsToCryptoSeedResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        MnemonicsToCryptoSeedResult.class.getName());
+    }
+    // Use MnemonicsToCryptoSeedResult.newBuilder() to construct.
+    private MnemonicsToCryptoSeedResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MnemonicsToCryptoSeedResult() {
+      spendKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      serialNoKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      viewKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      detectorRootKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult.class, info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult.Builder.class);
+    }
+
+    public static final int SPENDKEYROOTSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString spendKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes spendKeyRootSeed = 1;</code>
+     * @return The spendKeyRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpendKeyRootSeed() {
+      return spendKeyRootSeed_;
+    }
+
+    public static final int SERIALNOKEYROOTSEED_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString serialNoKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes serialNoKeyRootSeed = 2;</code>
+     * @return The serialNoKeyRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSerialNoKeyRootSeed() {
+      return serialNoKeyRootSeed_;
+    }
+
+    public static final int VIEWKEYROOTSEED_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString viewKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes viewKeyRootSeed = 3;</code>
+     * @return The viewKeyRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getViewKeyRootSeed() {
+      return viewKeyRootSeed_;
+    }
+
+    public static final int DETECTORROOTKEY_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString detectorRootKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes detectorRootKey = 4;</code>
+     * @return The detectorRootKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDetectorRootKey() {
+      return detectorRootKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!spendKeyRootSeed_.isEmpty()) {
+        output.writeBytes(1, spendKeyRootSeed_);
+      }
+      if (!serialNoKeyRootSeed_.isEmpty()) {
+        output.writeBytes(2, serialNoKeyRootSeed_);
+      }
+      if (!viewKeyRootSeed_.isEmpty()) {
+        output.writeBytes(3, viewKeyRootSeed_);
+      }
+      if (!detectorRootKey_.isEmpty()) {
+        output.writeBytes(4, detectorRootKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!spendKeyRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, spendKeyRootSeed_);
+      }
+      if (!serialNoKeyRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, serialNoKeyRootSeed_);
+      }
+      if (!viewKeyRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, viewKeyRootSeed_);
+      }
+      if (!detectorRootKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, detectorRootKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult other = (info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult) obj;
+
+      if (!getSpendKeyRootSeed()
+          .equals(other.getSpendKeyRootSeed())) return false;
+      if (!getSerialNoKeyRootSeed()
+          .equals(other.getSerialNoKeyRootSeed())) return false;
+      if (!getViewKeyRootSeed()
+          .equals(other.getViewKeyRootSeed())) return false;
+      if (!getDetectorRootKey()
+          .equals(other.getDetectorRootKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPENDKEYROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getSpendKeyRootSeed().hashCode();
+      hash = (37 * hash) + SERIALNOKEYROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getSerialNoKeyRootSeed().hashCode();
+      hash = (37 * hash) + VIEWKEYROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getViewKeyRootSeed().hashCode();
+      hash = (37 * hash) + DETECTORROOTKEY_FIELD_NUMBER;
+      hash = (53 * hash) + getDetectorRootKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.MnemonicsToCryptoSeedResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.MnemonicsToCryptoSeedResult)
+        info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult.class, info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        spendKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        serialNoKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        viewKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        detectorRootKey_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToCryptoSeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult build() {
+        info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult buildPartial() {
+        info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult result = new info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.spendKeyRootSeed_ = spendKeyRootSeed_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.serialNoKeyRootSeed_ = serialNoKeyRootSeed_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.viewKeyRootSeed_ = viewKeyRootSeed_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.detectorRootKey_ = detectorRootKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult) {
+          return mergeFrom((info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult other) {
+        if (other == info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult.getDefaultInstance()) return this;
+        if (other.getSpendKeyRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setSpendKeyRootSeed(other.getSpendKeyRootSeed());
+        }
+        if (other.getSerialNoKeyRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setSerialNoKeyRootSeed(other.getSerialNoKeyRootSeed());
+        }
+        if (other.getViewKeyRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setViewKeyRootSeed(other.getViewKeyRootSeed());
+        }
+        if (other.getDetectorRootKey() != com.google.protobuf.ByteString.EMPTY) {
+          setDetectorRootKey(other.getDetectorRootKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                spendKeyRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                serialNoKeyRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                viewKeyRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                detectorRootKey_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString spendKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes spendKeyRootSeed = 1;</code>
+       * @return The spendKeyRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpendKeyRootSeed() {
+        return spendKeyRootSeed_;
+      }
+      /**
+       * <code>bytes spendKeyRootSeed = 1;</code>
+       * @param value The spendKeyRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendKeyRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        spendKeyRootSeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes spendKeyRootSeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpendKeyRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        spendKeyRootSeed_ = getDefaultInstance().getSpendKeyRootSeed();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString serialNoKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes serialNoKeyRootSeed = 2;</code>
+       * @return The serialNoKeyRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSerialNoKeyRootSeed() {
+        return serialNoKeyRootSeed_;
+      }
+      /**
+       * <code>bytes serialNoKeyRootSeed = 2;</code>
+       * @param value The serialNoKeyRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSerialNoKeyRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        serialNoKeyRootSeed_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes serialNoKeyRootSeed = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSerialNoKeyRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        serialNoKeyRootSeed_ = getDefaultInstance().getSerialNoKeyRootSeed();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString viewKeyRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes viewKeyRootSeed = 3;</code>
+       * @return The viewKeyRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getViewKeyRootSeed() {
+        return viewKeyRootSeed_;
+      }
+      /**
+       * <code>bytes viewKeyRootSeed = 3;</code>
+       * @param value The viewKeyRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setViewKeyRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        viewKeyRootSeed_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes viewKeyRootSeed = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearViewKeyRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        viewKeyRootSeed_ = getDefaultInstance().getViewKeyRootSeed();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString detectorRootKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes detectorRootKey = 4;</code>
+       * @return The detectorRootKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDetectorRootKey() {
+        return detectorRootKey_;
+      }
+      /**
+       * <code>bytes detectorRootKey = 4;</code>
+       * @param value The detectorRootKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetectorRootKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        detectorRootKey_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes detectorRootKey = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDetectorRootKey() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        detectorRootKey_ = getDefaultInstance().getDetectorRootKey();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.MnemonicsToCryptoSeedResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.MnemonicsToCryptoSeedResult)
+    private static final info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult();
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MnemonicsToCryptoSeedResult>
+        PARSER = new com.google.protobuf.AbstractParser<MnemonicsToCryptoSeedResult>() {
+      @java.lang.Override
+      public MnemonicsToCryptoSeedResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MnemonicsToCryptoSeedResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MnemonicsToCryptoSeedResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.MnemonicsToCryptoSeedResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EntropySeedToPublicRandRootSeedArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.EntropySeedToPublicRandRootSeedArgs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    com.google.protobuf.ByteString getEntropySeed();
+  }
+  /**
+   * Protobuf type {@code core.EntropySeedToPublicRandRootSeedArgs}
+   */
+  public static final class EntropySeedToPublicRandRootSeedArgs extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.EntropySeedToPublicRandRootSeedArgs)
+      EntropySeedToPublicRandRootSeedArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        EntropySeedToPublicRandRootSeedArgs.class.getName());
+    }
+    // Use EntropySeedToPublicRandRootSeedArgs.newBuilder() to construct.
+    private EntropySeedToPublicRandRootSeedArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EntropySeedToPublicRandRootSeedArgs() {
+      entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs.class, info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs.Builder.class);
+    }
+
+    public static final int ENTROPYSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes entropySeed = 1;</code>
+     * @return The entropySeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEntropySeed() {
+      return entropySeed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!entropySeed_.isEmpty()) {
+        output.writeBytes(1, entropySeed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!entropySeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, entropySeed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs other = (info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs) obj;
+
+      if (!getEntropySeed()
+          .equals(other.getEntropySeed())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTROPYSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getEntropySeed().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.EntropySeedToPublicRandRootSeedArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.EntropySeedToPublicRandRootSeedArgs)
+        info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs.class, info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs build() {
+        info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs buildPartial() {
+        info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs result = new info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entropySeed_ = entropySeed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs) {
+          return mergeFrom((info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs other) {
+        if (other == info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs.getDefaultInstance()) return this;
+        if (other.getEntropySeed() != com.google.protobuf.ByteString.EMPTY) {
+          setEntropySeed(other.getEntropySeed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                entropySeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString entropySeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return The entropySeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEntropySeed() {
+        return entropySeed_;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @param value The entropySeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntropySeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        entropySeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes entropySeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntropySeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entropySeed_ = getDefaultInstance().getEntropySeed();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.EntropySeedToPublicRandRootSeedArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.EntropySeedToPublicRandRootSeedArgs)
+    private static final info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs();
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EntropySeedToPublicRandRootSeedArgs>
+        PARSER = new com.google.protobuf.AbstractParser<EntropySeedToPublicRandRootSeedArgs>() {
+      @java.lang.Override
+      public EntropySeedToPublicRandRootSeedArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EntropySeedToPublicRandRootSeedArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EntropySeedToPublicRandRootSeedArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EntropySeedToPublicRandRootSeedResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.EntropySeedToPublicRandRootSeedResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes publicRandRootSeed = 1;</code>
+     * @return The publicRandRootSeed.
+     */
+    com.google.protobuf.ByteString getPublicRandRootSeed();
+  }
+  /**
+   * Protobuf type {@code core.EntropySeedToPublicRandRootSeedResult}
+   */
+  public static final class EntropySeedToPublicRandRootSeedResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.EntropySeedToPublicRandRootSeedResult)
+      EntropySeedToPublicRandRootSeedResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        EntropySeedToPublicRandRootSeedResult.class.getName());
+    }
+    // Use EntropySeedToPublicRandRootSeedResult.newBuilder() to construct.
+    private EntropySeedToPublicRandRootSeedResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EntropySeedToPublicRandRootSeedResult() {
+      publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult.class, info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult.Builder.class);
+    }
+
+    public static final int PUBLICRANDROOTSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes publicRandRootSeed = 1;</code>
+     * @return The publicRandRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicRandRootSeed() {
+      return publicRandRootSeed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!publicRandRootSeed_.isEmpty()) {
+        output.writeBytes(1, publicRandRootSeed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!publicRandRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, publicRandRootSeed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult other = (info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult) obj;
+
+      if (!getPublicRandRootSeed()
+          .equals(other.getPublicRandRootSeed())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLICRANDROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicRandRootSeed().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.EntropySeedToPublicRandRootSeedResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.EntropySeedToPublicRandRootSeedResult)
+        info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult.class, info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_EntropySeedToPublicRandRootSeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult build() {
+        info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult buildPartial() {
+        info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult result = new info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publicRandRootSeed_ = publicRandRootSeed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult) {
+          return mergeFrom((info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult other) {
+        if (other == info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult.getDefaultInstance()) return this;
+        if (other.getPublicRandRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicRandRootSeed(other.getPublicRandRootSeed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publicRandRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @return The publicRandRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicRandRootSeed() {
+        return publicRandRootSeed_;
+      }
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @param value The publicRandRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicRandRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicRandRootSeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicRandRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publicRandRootSeed_ = getDefaultInstance().getPublicRandRootSeed();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.EntropySeedToPublicRandRootSeedResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.EntropySeedToPublicRandRootSeedResult)
+    private static final info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult();
+    }
+
+    public static info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EntropySeedToPublicRandRootSeedResult>
+        PARSER = new com.google.protobuf.AbstractParser<EntropySeedToPublicRandRootSeedResult>() {
+      @java.lang.Override
+      public EntropySeedToPublicRandRootSeedResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EntropySeedToPublicRandRootSeedResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EntropySeedToPublicRandRootSeedResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.EntropySeedToPublicRandRootSeedResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MnemonicsToPublicRandRootSeedArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.MnemonicsToPublicRandRootSeedArgs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return A list containing the mnemonic.
+     */
+    java.util.List<java.lang.String>
+        getMnemonicList();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return The count of mnemonic.
+     */
+    int getMnemonicCount();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the element to return.
+     * @return The mnemonic at the given index.
+     */
+    java.lang.String getMnemonic(int index);
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the mnemonic at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMnemonicBytes(int index);
+  }
+  /**
+   * Protobuf type {@code core.MnemonicsToPublicRandRootSeedArgs}
+   */
+  public static final class MnemonicsToPublicRandRootSeedArgs extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.MnemonicsToPublicRandRootSeedArgs)
+      MnemonicsToPublicRandRootSeedArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        MnemonicsToPublicRandRootSeedArgs.class.getName());
+    }
+    // Use MnemonicsToPublicRandRootSeedArgs.newBuilder() to construct.
+    private MnemonicsToPublicRandRootSeedArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MnemonicsToPublicRandRootSeedArgs() {
+      mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs.class, info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs.Builder.class);
+    }
+
+    public static final int MNEMONIC_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList mnemonic_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return A list containing the mnemonic.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMnemonicList() {
+      return mnemonic_;
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @return The count of mnemonic.
+     */
+    public int getMnemonicCount() {
+      return mnemonic_.size();
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the element to return.
+     * @return The mnemonic at the given index.
+     */
+    public java.lang.String getMnemonic(int index) {
+      return mnemonic_.get(index);
+    }
+    /**
+     * <code>repeated string mnemonic = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the mnemonic at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMnemonicBytes(int index) {
+      return mnemonic_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < mnemonic_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, mnemonic_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < mnemonic_.size(); i++) {
+          dataSize += computeStringSizeNoTag(mnemonic_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMnemonicList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs other = (info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs) obj;
+
+      if (!getMnemonicList()
+          .equals(other.getMnemonicList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMnemonicCount() > 0) {
+        hash = (37 * hash) + MNEMONIC_FIELD_NUMBER;
+        hash = (53 * hash) + getMnemonicList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.MnemonicsToPublicRandRootSeedArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.MnemonicsToPublicRandRootSeedArgs)
+        info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs.class, info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mnemonic_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs build() {
+        info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs buildPartial() {
+        info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs result = new info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          mnemonic_.makeImmutable();
+          result.mnemonic_ = mnemonic_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs) {
+          return mergeFrom((info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs other) {
+        if (other == info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs.getDefaultInstance()) return this;
+        if (!other.mnemonic_.isEmpty()) {
+          if (mnemonic_.isEmpty()) {
+            mnemonic_ = other.mnemonic_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureMnemonicIsMutable();
+            mnemonic_.addAll(other.mnemonic_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMnemonicIsMutable();
+                mnemonic_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMnemonicIsMutable() {
+        if (!mnemonic_.isModifiable()) {
+          mnemonic_ = new com.google.protobuf.LazyStringArrayList(mnemonic_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return A list containing the mnemonic.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMnemonicList() {
+        mnemonic_.makeImmutable();
+        return mnemonic_;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return The count of mnemonic.
+       */
+      public int getMnemonicCount() {
+        return mnemonic_.size();
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index of the element to return.
+       * @return The mnemonic at the given index.
+       */
+      public java.lang.String getMnemonic(int index) {
+        return mnemonic_.get(index);
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the mnemonic at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMnemonicBytes(int index) {
+        return mnemonic_.getByteString(index);
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The mnemonic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMnemonic(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMnemonicIsMutable();
+        mnemonic_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param value The mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMnemonic(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMnemonicIsMutable();
+        mnemonic_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param values The mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMnemonic(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMnemonicIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mnemonic_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMnemonic() {
+        mnemonic_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string mnemonic = 1;</code>
+       * @param value The bytes of the mnemonic to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMnemonicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMnemonicIsMutable();
+        mnemonic_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.MnemonicsToPublicRandRootSeedArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.MnemonicsToPublicRandRootSeedArgs)
+    private static final info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs();
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MnemonicsToPublicRandRootSeedArgs>
+        PARSER = new com.google.protobuf.AbstractParser<MnemonicsToPublicRandRootSeedArgs>() {
+      @java.lang.Override
+      public MnemonicsToPublicRandRootSeedArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MnemonicsToPublicRandRootSeedArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MnemonicsToPublicRandRootSeedArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MnemonicsToPublicRandRootSeedResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.MnemonicsToPublicRandRootSeedResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes publicRandRootSeed = 1;</code>
+     * @return The publicRandRootSeed.
+     */
+    com.google.protobuf.ByteString getPublicRandRootSeed();
+  }
+  /**
+   * Protobuf type {@code core.MnemonicsToPublicRandRootSeedResult}
+   */
+  public static final class MnemonicsToPublicRandRootSeedResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.MnemonicsToPublicRandRootSeedResult)
+      MnemonicsToPublicRandRootSeedResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        MnemonicsToPublicRandRootSeedResult.class.getName());
+    }
+    // Use MnemonicsToPublicRandRootSeedResult.newBuilder() to construct.
+    private MnemonicsToPublicRandRootSeedResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MnemonicsToPublicRandRootSeedResult() {
+      publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult.class, info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult.Builder.class);
+    }
+
+    public static final int PUBLICRANDROOTSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes publicRandRootSeed = 1;</code>
+     * @return The publicRandRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicRandRootSeed() {
+      return publicRandRootSeed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!publicRandRootSeed_.isEmpty()) {
+        output.writeBytes(1, publicRandRootSeed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!publicRandRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, publicRandRootSeed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult other = (info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult) obj;
+
+      if (!getPublicRandRootSeed()
+          .equals(other.getPublicRandRootSeed())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLICRANDROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicRandRootSeed().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.MnemonicsToPublicRandRootSeedResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.MnemonicsToPublicRandRootSeedResult)
+        info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult.class, info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_MnemonicsToPublicRandRootSeedResult_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult build() {
+        info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult buildPartial() {
+        info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult result = new info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publicRandRootSeed_ = publicRandRootSeed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult) {
+          return mergeFrom((info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult other) {
+        if (other == info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult.getDefaultInstance()) return this;
+        if (other.getPublicRandRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicRandRootSeed(other.getPublicRandRootSeed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publicRandRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @return The publicRandRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicRandRootSeed() {
+        return publicRandRootSeed_;
+      }
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @param value The publicRandRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicRandRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicRandRootSeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicRandRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publicRandRootSeed_ = getDefaultInstance().getPublicRandRootSeed();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.MnemonicsToPublicRandRootSeedResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.MnemonicsToPublicRandRootSeedResult)
+    private static final info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult();
+    }
+
+    public static info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MnemonicsToPublicRandRootSeedResult>
+        PARSER = new com.google.protobuf.AbstractParser<MnemonicsToPublicRandRootSeedResult>() {
+      @java.lang.Override
+      public MnemonicsToPublicRandRootSeedResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MnemonicsToPublicRandRootSeedResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MnemonicsToPublicRandRootSeedResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.MnemonicsToPublicRandRootSeedResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GenerateSafeCryptoSeedArgsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:core.GenerateSafeCryptoSeedArgs)
       com.google.protobuf.MessageOrBuilder {
@@ -4521,6 +11533,948 @@ public final class Core {
 
     @java.lang.Override
     public info.abelian.sdk.proto.Core.GenerateCryptoKeysAndAddressByRootSeedsResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SequenceNoToPublicRandArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.SequenceNoToPublicRandArgs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes publicRandRootSeed = 1;</code>
+     * @return The publicRandRootSeed.
+     */
+    com.google.protobuf.ByteString getPublicRandRootSeed();
+
+    /**
+     * <code>uint32 sequenceNo = 2;</code>
+     * @return The sequenceNo.
+     */
+    int getSequenceNo();
+  }
+  /**
+   * Protobuf type {@code core.SequenceNoToPublicRandArgs}
+   */
+  public static final class SequenceNoToPublicRandArgs extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.SequenceNoToPublicRandArgs)
+      SequenceNoToPublicRandArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        SequenceNoToPublicRandArgs.class.getName());
+    }
+    // Use SequenceNoToPublicRandArgs.newBuilder() to construct.
+    private SequenceNoToPublicRandArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private SequenceNoToPublicRandArgs() {
+      publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs.class, info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs.Builder.class);
+    }
+
+    public static final int PUBLICRANDROOTSEED_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes publicRandRootSeed = 1;</code>
+     * @return The publicRandRootSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicRandRootSeed() {
+      return publicRandRootSeed_;
+    }
+
+    public static final int SEQUENCENO_FIELD_NUMBER = 2;
+    private int sequenceNo_ = 0;
+    /**
+     * <code>uint32 sequenceNo = 2;</code>
+     * @return The sequenceNo.
+     */
+    @java.lang.Override
+    public int getSequenceNo() {
+      return sequenceNo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!publicRandRootSeed_.isEmpty()) {
+        output.writeBytes(1, publicRandRootSeed_);
+      }
+      if (sequenceNo_ != 0) {
+        output.writeUInt32(2, sequenceNo_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!publicRandRootSeed_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, publicRandRootSeed_);
+      }
+      if (sequenceNo_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, sequenceNo_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs other = (info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs) obj;
+
+      if (!getPublicRandRootSeed()
+          .equals(other.getPublicRandRootSeed())) return false;
+      if (getSequenceNo()
+          != other.getSequenceNo()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLICRANDROOTSEED_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicRandRootSeed().hashCode();
+      hash = (37 * hash) + SEQUENCENO_FIELD_NUMBER;
+      hash = (53 * hash) + getSequenceNo();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.SequenceNoToPublicRandArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.SequenceNoToPublicRandArgs)
+        info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs.class, info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+        sequenceNo_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs build() {
+        info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs buildPartial() {
+        info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs result = new info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publicRandRootSeed_ = publicRandRootSeed_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sequenceNo_ = sequenceNo_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs) {
+          return mergeFrom((info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs other) {
+        if (other == info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs.getDefaultInstance()) return this;
+        if (other.getPublicRandRootSeed() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicRandRootSeed(other.getPublicRandRootSeed());
+        }
+        if (other.getSequenceNo() != 0) {
+          setSequenceNo(other.getSequenceNo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publicRandRootSeed_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                sequenceNo_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString publicRandRootSeed_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @return The publicRandRootSeed.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicRandRootSeed() {
+        return publicRandRootSeed_;
+      }
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @param value The publicRandRootSeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicRandRootSeed(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicRandRootSeed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes publicRandRootSeed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicRandRootSeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publicRandRootSeed_ = getDefaultInstance().getPublicRandRootSeed();
+        onChanged();
+        return this;
+      }
+
+      private int sequenceNo_ ;
+      /**
+       * <code>uint32 sequenceNo = 2;</code>
+       * @return The sequenceNo.
+       */
+      @java.lang.Override
+      public int getSequenceNo() {
+        return sequenceNo_;
+      }
+      /**
+       * <code>uint32 sequenceNo = 2;</code>
+       * @param value The sequenceNo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceNo(int value) {
+
+        sequenceNo_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 sequenceNo = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceNo() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sequenceNo_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.SequenceNoToPublicRandArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.SequenceNoToPublicRandArgs)
+    private static final info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs();
+    }
+
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SequenceNoToPublicRandArgs>
+        PARSER = new com.google.protobuf.AbstractParser<SequenceNoToPublicRandArgs>() {
+      @java.lang.Override
+      public SequenceNoToPublicRandArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SequenceNoToPublicRandArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SequenceNoToPublicRandArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.SequenceNoToPublicRandArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SequenceNoToPublicRandResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.SequenceNoToPublicRandResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes publicRand = 1;</code>
+     * @return The publicRand.
+     */
+    com.google.protobuf.ByteString getPublicRand();
+  }
+  /**
+   * Protobuf type {@code core.SequenceNoToPublicRandResult}
+   */
+  public static final class SequenceNoToPublicRandResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:core.SequenceNoToPublicRandResult)
+      SequenceNoToPublicRandResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        SequenceNoToPublicRandResult.class.getName());
+    }
+    // Use SequenceNoToPublicRandResult.newBuilder() to construct.
+    private SequenceNoToPublicRandResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private SequenceNoToPublicRandResult() {
+      publicRand_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult.class, info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult.Builder.class);
+    }
+
+    public static final int PUBLICRAND_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString publicRand_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes publicRand = 1;</code>
+     * @return The publicRand.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicRand() {
+      return publicRand_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!publicRand_.isEmpty()) {
+        output.writeBytes(1, publicRand_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!publicRand_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, publicRand_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult)) {
+        return super.equals(obj);
+      }
+      info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult other = (info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult) obj;
+
+      if (!getPublicRand()
+          .equals(other.getPublicRand())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLICRAND_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicRand().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code core.SequenceNoToPublicRandResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.SequenceNoToPublicRandResult)
+        info.abelian.sdk.proto.Core.SequenceNoToPublicRandResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult.class, info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult.Builder.class);
+      }
+
+      // Construct using info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publicRand_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return info.abelian.sdk.proto.Core.internal_static_core_SequenceNoToPublicRandResult_descriptor;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult getDefaultInstanceForType() {
+        return info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult build() {
+        info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult buildPartial() {
+        info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult result = new info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publicRand_ = publicRand_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult) {
+          return mergeFrom((info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult other) {
+        if (other == info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult.getDefaultInstance()) return this;
+        if (other.getPublicRand() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicRand(other.getPublicRand());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publicRand_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString publicRand_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes publicRand = 1;</code>
+       * @return The publicRand.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicRand() {
+        return publicRand_;
+      }
+      /**
+       * <code>bytes publicRand = 1;</code>
+       * @param value The publicRand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicRand(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicRand_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes publicRand = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicRand() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publicRand_ = getDefaultInstance().getPublicRand();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:core.SequenceNoToPublicRandResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.SequenceNoToPublicRandResult)
+    private static final info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult();
+    }
+
+    public static info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SequenceNoToPublicRandResult>
+        PARSER = new com.google.protobuf.AbstractParser<SequenceNoToPublicRandResult>() {
+      @java.lang.Override
+      public SequenceNoToPublicRandResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SequenceNoToPublicRandResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SequenceNoToPublicRandResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public info.abelian.sdk.proto.Core.SequenceNoToPublicRandResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10469,948 +18423,6 @@ public final class Core {
 
     @java.lang.Override
     public info.abelian.sdk.proto.Core.GetShortAbelAddressFromAbelAddressResult getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface DecodeCoinAddressFromTxOutDataArgsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:core.DecodeCoinAddressFromTxOutDataArgs)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>uint32 txVersion = 1;</code>
-     * @return The txVersion.
-     */
-    int getTxVersion();
-
-    /**
-     * <code>bytes txOutData = 2;</code>
-     * @return The txOutData.
-     */
-    com.google.protobuf.ByteString getTxOutData();
-  }
-  /**
-   * Protobuf type {@code core.DecodeCoinAddressFromTxOutDataArgs}
-   */
-  public static final class DecodeCoinAddressFromTxOutDataArgs extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:core.DecodeCoinAddressFromTxOutDataArgs)
-      DecodeCoinAddressFromTxOutDataArgsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 29,
-        /* patch= */ 1,
-        /* suffix= */ "",
-        DecodeCoinAddressFromTxOutDataArgs.class.getName());
-    }
-    // Use DecodeCoinAddressFromTxOutDataArgs.newBuilder() to construct.
-    private DecodeCoinAddressFromTxOutDataArgs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private DecodeCoinAddressFromTxOutDataArgs() {
-      txOutData_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataArgs_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataArgs_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs.class, info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs.Builder.class);
-    }
-
-    public static final int TXVERSION_FIELD_NUMBER = 1;
-    private int txVersion_ = 0;
-    /**
-     * <code>uint32 txVersion = 1;</code>
-     * @return The txVersion.
-     */
-    @java.lang.Override
-    public int getTxVersion() {
-      return txVersion_;
-    }
-
-    public static final int TXOUTDATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString txOutData_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <code>bytes txOutData = 2;</code>
-     * @return The txOutData.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getTxOutData() {
-      return txOutData_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (txVersion_ != 0) {
-        output.writeUInt32(1, txVersion_);
-      }
-      if (!txOutData_.isEmpty()) {
-        output.writeBytes(2, txOutData_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (txVersion_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, txVersion_);
-      }
-      if (!txOutData_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, txOutData_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs)) {
-        return super.equals(obj);
-      }
-      info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs other = (info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs) obj;
-
-      if (getTxVersion()
-          != other.getTxVersion()) return false;
-      if (!getTxOutData()
-          .equals(other.getTxOutData())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TXVERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getTxVersion();
-      hash = (37 * hash) + TXOUTDATA_FIELD_NUMBER;
-      hash = (53 * hash) + getTxOutData().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code core.DecodeCoinAddressFromTxOutDataArgs}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:core.DecodeCoinAddressFromTxOutDataArgs)
-        info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataArgs_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataArgs_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs.class, info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs.Builder.class);
-      }
-
-      // Construct using info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        txVersion_ = 0;
-        txOutData_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataArgs_descriptor;
-      }
-
-      @java.lang.Override
-      public info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs getDefaultInstanceForType() {
-        return info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs build() {
-        info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs buildPartial() {
-        info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs result = new info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.txVersion_ = txVersion_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.txOutData_ = txOutData_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs) {
-          return mergeFrom((info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs other) {
-        if (other == info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs.getDefaultInstance()) return this;
-        if (other.getTxVersion() != 0) {
-          setTxVersion(other.getTxVersion());
-        }
-        if (other.getTxOutData() != com.google.protobuf.ByteString.EMPTY) {
-          setTxOutData(other.getTxOutData());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                txVersion_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                txOutData_ = input.readBytes();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int txVersion_ ;
-      /**
-       * <code>uint32 txVersion = 1;</code>
-       * @return The txVersion.
-       */
-      @java.lang.Override
-      public int getTxVersion() {
-        return txVersion_;
-      }
-      /**
-       * <code>uint32 txVersion = 1;</code>
-       * @param value The txVersion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTxVersion(int value) {
-
-        txVersion_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 txVersion = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTxVersion() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        txVersion_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString txOutData_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes txOutData = 2;</code>
-       * @return The txOutData.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString getTxOutData() {
-        return txOutData_;
-      }
-      /**
-       * <code>bytes txOutData = 2;</code>
-       * @param value The txOutData to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTxOutData(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        txOutData_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes txOutData = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTxOutData() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        txOutData_ = getDefaultInstance().getTxOutData();
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:core.DecodeCoinAddressFromTxOutDataArgs)
-    }
-
-    // @@protoc_insertion_point(class_scope:core.DecodeCoinAddressFromTxOutDataArgs)
-    private static final info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs();
-    }
-
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<DecodeCoinAddressFromTxOutDataArgs>
-        PARSER = new com.google.protobuf.AbstractParser<DecodeCoinAddressFromTxOutDataArgs>() {
-      @java.lang.Override
-      public DecodeCoinAddressFromTxOutDataArgs parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<DecodeCoinAddressFromTxOutDataArgs> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DecodeCoinAddressFromTxOutDataArgs> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataArgs getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface DecodeCoinAddressFromTxOutDataResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:core.DecodeCoinAddressFromTxOutDataResult)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>bytes coinAddress = 1;</code>
-     * @return The coinAddress.
-     */
-    com.google.protobuf.ByteString getCoinAddress();
-  }
-  /**
-   * Protobuf type {@code core.DecodeCoinAddressFromTxOutDataResult}
-   */
-  public static final class DecodeCoinAddressFromTxOutDataResult extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:core.DecodeCoinAddressFromTxOutDataResult)
-      DecodeCoinAddressFromTxOutDataResultOrBuilder {
-  private static final long serialVersionUID = 0L;
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 29,
-        /* patch= */ 1,
-        /* suffix= */ "",
-        DecodeCoinAddressFromTxOutDataResult.class.getName());
-    }
-    // Use DecodeCoinAddressFromTxOutDataResult.newBuilder() to construct.
-    private DecodeCoinAddressFromTxOutDataResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private DecodeCoinAddressFromTxOutDataResult() {
-      coinAddress_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataResult_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataResult_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult.class, info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult.Builder.class);
-    }
-
-    public static final int COINADDRESS_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString coinAddress_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <code>bytes coinAddress = 1;</code>
-     * @return The coinAddress.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getCoinAddress() {
-      return coinAddress_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!coinAddress_.isEmpty()) {
-        output.writeBytes(1, coinAddress_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!coinAddress_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, coinAddress_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult)) {
-        return super.equals(obj);
-      }
-      info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult other = (info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult) obj;
-
-      if (!getCoinAddress()
-          .equals(other.getCoinAddress())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + COINADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getCoinAddress().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code core.DecodeCoinAddressFromTxOutDataResult}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:core.DecodeCoinAddressFromTxOutDataResult)
-        info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResultOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataResult_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataResult_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult.class, info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult.Builder.class);
-      }
-
-      // Construct using info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        coinAddress_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return info.abelian.sdk.proto.Core.internal_static_core_DecodeCoinAddressFromTxOutDataResult_descriptor;
-      }
-
-      @java.lang.Override
-      public info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult getDefaultInstanceForType() {
-        return info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult build() {
-        info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult buildPartial() {
-        info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult result = new info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.coinAddress_ = coinAddress_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult) {
-          return mergeFrom((info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult other) {
-        if (other == info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult.getDefaultInstance()) return this;
-        if (other.getCoinAddress() != com.google.protobuf.ByteString.EMPTY) {
-          setCoinAddress(other.getCoinAddress());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                coinAddress_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString coinAddress_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes coinAddress = 1;</code>
-       * @return The coinAddress.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString getCoinAddress() {
-        return coinAddress_;
-      }
-      /**
-       * <code>bytes coinAddress = 1;</code>
-       * @param value The coinAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCoinAddress(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        coinAddress_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes coinAddress = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCoinAddress() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        coinAddress_ = getDefaultInstance().getCoinAddress();
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:core.DecodeCoinAddressFromTxOutDataResult)
-    }
-
-    // @@protoc_insertion_point(class_scope:core.DecodeCoinAddressFromTxOutDataResult)
-    private static final info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult();
-    }
-
-    public static info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<DecodeCoinAddressFromTxOutDataResult>
-        PARSER = new com.google.protobuf.AbstractParser<DecodeCoinAddressFromTxOutDataResult>() {
-      @java.lang.Override
-      public DecodeCoinAddressFromTxOutDataResult parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<DecodeCoinAddressFromTxOutDataResult> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DecodeCoinAddressFromTxOutDataResult> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public info.abelian.sdk.proto.Core.DecodeCoinAddressFromTxOutDataResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17873,6 +24885,76 @@ public final class Core {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_core_BlockDescMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_GenerateEntropySeedArgs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_GenerateEntropySeedArgs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_GenerateEntropySeedResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_GenerateEntropySeedResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_EntropySeedToMnemonicsArgs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_EntropySeedToMnemonicsArgs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_EntropySeedToMnemonicsResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_EntropySeedToMnemonicsResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_MnemonicsToEntropySeedArgs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_MnemonicsToEntropySeedArgs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_MnemonicsToEntropySeedResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_MnemonicsToEntropySeedResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_EntropySeedToCryptoSeedArgs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_EntropySeedToCryptoSeedArgs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_EntropySeedToCryptoSeedResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_EntropySeedToCryptoSeedResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_MnemonicsToCryptoSeedArgs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_MnemonicsToCryptoSeedArgs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_MnemonicsToCryptoSeedResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_MnemonicsToCryptoSeedResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_EntropySeedToPublicRandRootSeedArgs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_EntropySeedToPublicRandRootSeedArgs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_EntropySeedToPublicRandRootSeedResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_EntropySeedToPublicRandRootSeedResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_MnemonicsToPublicRandRootSeedArgs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_MnemonicsToPublicRandRootSeedArgs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_MnemonicsToPublicRandRootSeedResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_MnemonicsToPublicRandRootSeedResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_core_GenerateSafeCryptoSeedArgs_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -17892,6 +24974,16 @@ public final class Core {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_SequenceNoToPublicRandArgs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_SequenceNoToPublicRandArgs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_SequenceNoToPublicRandResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_core_SequenceNoToPublicRandResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandArgs_descriptor;
   private static final 
@@ -17953,16 +25045,6 @@ public final class Core {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_core_GetShortAbelAddressFromAbelAddressResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_core_DecodeCoinAddressFromTxOutDataArgs_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_core_DecodeCoinAddressFromTxOutDataArgs_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_core_DecodeCoinAddressFromTxOutDataResult_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_core_DecodeCoinAddressFromTxOutDataResult_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_core_CoinReceiveFromTxOutDataArgs_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -18018,73 +25100,96 @@ public final class Core {
       "nSerialNumber\030\010 \001(\014\"6\n\020TxOutDescMessage\022" +
       "\023\n\013abelAddress\030\001 \001(\014\022\r\n\005value\030\002 \001(\003\"3\n\020B" +
       "lockDescMessage\022\017\n\007binData\030\001 \001(\014\022\016\n\006heig" +
-      "ht\030\002 \001(\003\"2\n\032GenerateSafeCryptoSeedArgs\022\024" +
-      "\n\014privacyLevel\030\001 \001(\005\"\207\001\n\034GenerateSafeCry" +
+      "ht\030\002 \001(\003\"\031\n\027GenerateEntropySeedArgs\"0\n\031G" +
+      "enerateEntropySeedResult\022\023\n\013entropySeed\030" +
+      "\001 \001(\014\"1\n\032EntropySeedToMnemonicsArgs\022\023\n\013e" +
+      "ntropySeed\030\001 \001(\014\"0\n\034EntropySeedToMnemoni" +
+      "csResult\022\020\n\010mnemonic\030\001 \003(\t\".\n\032MnemonicsT" +
+      "oEntropySeedArgs\022\020\n\010mnemonic\030\001 \003(\t\"3\n\034Mn" +
+      "emonicsToEntropySeedResult\022\023\n\013entropySee" +
+      "d\030\001 \001(\014\"2\n\033EntropySeedToCryptoSeedArgs\022\023" +
+      "\n\013entropySeed\030\001 \001(\014\"\210\001\n\035EntropySeedToCry" +
       "ptoSeedResult\022\030\n\020spendKeyRootSeed\030\001 \001(\014\022" +
       "\033\n\023serialNoKeyRootSeed\030\002 \001(\014\022\027\n\017viewKeyR" +
-      "ootSeed\030\003 \001(\014\022\027\n\017detectorRootKey\030\004 \001(\014\"\254" +
-      "\001\n+GenerateCryptoKeysAndAddressByRootSee" +
-      "dsArgs\022\030\n\020spendKeyRootSeed\030\001 \001(\014\022\033\n\023seri" +
-      "alNoKeyRootSeed\030\002 \001(\014\022\027\n\017viewKeyRootSeed" +
-      "\030\003 \001(\014\022\027\n\017detectorRootKey\030\004 \001(\014\022\024\n\014priva" +
-      "cyLevel\030\005 \001(\005\"\245\001\n-GenerateCryptoKeysAndA" +
-      "ddressByRootSeedsResult\022\026\n\016spendSecretKe" +
-      "y\030\001 \001(\014\022\031\n\021serialNoSecretKey\030\002 \001(\014\022\025\n\rvi" +
-      "ewSecretKey\030\003 \001(\014\022\023\n\013detectorKey\030\004 \001(\014\022\025" +
-      "\n\rcryptoAddress\030\005 \001(\014\"\316\001\n9GenerateCrypto" +
-      "KeysAndAddressByRootSeedsFromPublicRandA" +
-      "rgs\022\030\n\020spendKeyRootSeed\030\001 \001(\014\022\033\n\023serialN" +
-      "oKeyRootSeed\030\002 \001(\014\022\027\n\017viewKeyRootSeed\030\003 " +
-      "\001(\014\022\027\n\017detectorRootKey\030\004 \001(\014\022\024\n\014privacyL" +
-      "evel\030\005 \001(\005\022\022\n\npublicRand\030\006 \001(\014\"\263\001\n;Gener" +
-      "ateCryptoKeysAndAddressByRootSeedsFromPu" +
-      "blicRandResult\022\026\n\016spendSecretKey\030\001 \001(\014\022\031" +
-      "\n\021serialNoSecretKey\030\002 \001(\014\022\025\n\rviewSecretK" +
-      "ey\030\003 \001(\014\022\023\n\013detectorKey\030\004 \001(\014\022\025\n\rcryptoA" +
-      "ddress\030\005 \001(\014\"<\n#GetCoinAddressFromCrypto" +
-      "AddressArgs\022\025\n\rcryptoAddress\030\001 \001(\014\"<\n%Ge" +
-      "tCoinAddressFromCryptoAddressResult\022\023\n\013c" +
-      "oinAddress\030\001 \001(\014\";\n$ExtractPublicRandFro" +
-      "mCoinAddressArgs\022\023\n\013coinAddress\030\001 \001(\014\"<\n" +
-      "&ExtractPublicRandFromCoinAddressResult\022" +
-      "\022\n\npublicRand\030\001 \001(\014\"M\n#GetAbelAddressFro" +
-      "mCryptoAddressArgs\022\025\n\rcryptoAddress\030\001 \001(" +
-      "\014\022\017\n\007chainID\030\002 \001(\005\"<\n%GetAbelAddressFrom" +
-      "CryptoAddressResult\022\023\n\013abelAddress\030\001 \001(\014" +
-      "\":\n#GetCryptoAddressFromAbelAddressArgs\022" +
-      "\023\n\013abelAddress\030\001 \001(\014\">\n%GetCryptoAddress" +
-      "FromAbelAddressResult\022\025\n\rcryptoAddress\030\001" +
-      " \001(\014\"=\n&GetShortAbelAddressFromAbelAddre" +
-      "ssArgs\022\023\n\013abelAddress\030\001 \001(\014\"D\n(GetShortA" +
-      "belAddressFromAbelAddressResult\022\030\n\020short" +
-      "AbelAddress\030\001 \001(\014\"J\n\"DecodeCoinAddressFr" +
-      "omTxOutDataArgs\022\021\n\ttxVersion\030\001 \001(\r\022\021\n\ttx" +
-      "OutData\030\002 \001(\014\";\n$DecodeCoinAddressFromTx" +
-      "OutDataResult\022\023\n\013coinAddress\030\001 \001(\014\"\236\001\n\034C" +
-      "oinReceiveFromTxOutDataArgs\022\021\n\ttxVersion" +
-      "\030\001 \001(\r\022\021\n\ttxOutData\030\002 \001(\014\022\033\n\023accountPriv" +
-      "acyLevel\030\003 \001(\r\022\033\n\023coinDetectorRootKey\030\004 " +
-      "\001(\014\022\036\n\026coinViewSecretRootSeed\030\005 \001(\014\"D\n\036C" +
-      "oinReceiveFromTxOutDataResult\022\017\n\007success" +
-      "\030\001 \001(\010\022\021\n\tcoinValue\030\002 \001(\004\"\261\001\n\030GenerateRa" +
-      "wTxRequestArgs\022(\n\ttxInDescs\030\001 \003(\0132\025.core" +
-      ".TxInDescMessage\022*\n\ntxOutDescs\030\002 \003(\0132\026.c" +
-      "ore.TxOutDescMessage\0220\n\020txRingBlockDescs" +
-      "\030\003 \003(\0132\026.core.BlockDescMessage\022\r\n\005txFee\030" +
-      "\004 \001(\003\"*\n\032GenerateRawTxRequestResult\022\014\n\004d" +
-      "ata\030\001 \001(\014\"\270\001\n\025GenerateRawTxDataArgs\022\033\n\023s" +
-      "erializedTxRequest\030\001 \001(\014\022\025\n\rprivacyLevel" +
-      "s\030\002 \003(\005\022\031\n\021spendKeyRootSeeds\030\003 \003(\014\022\034\n\024se" +
-      "rialNoKeyRootSeeds\030\004 \003(\014\022\030\n\020viewKeyRootS" +
-      "eeds\030\005 \003(\014\022\030\n\020detectorRootKeys\030\006 \003(\014\"5\n\027" +
-      "GenerateRawTxDataResult\022\014\n\004data\030\001 \001(\014\022\014\n" +
-      "\004txid\030\002 \001(\014\"\213\001\n\034GenerateCoinSerialNumber" +
-      "Args\022\014\n\004txid\030\001 \001(\014\022\r\n\005index\030\002 \001(\005\022\036\n\026ser" +
-      "ialNoSecretRootSeed\030\003 \001(\014\022.\n\016ringBlockDe" +
-      "scs\030\004 \003(\0132\026.core.BlockDescMessage\"6\n\036Gen" +
-      "erateCoinSerialNumberResult\022\024\n\014serialNum" +
-      "ber\030\001 \001(\014B0\n\026info.abelian.sdk.protoZ\026abe" +
-      "lian.info/sdk/protob\006proto3"
+      "ootSeed\030\003 \001(\014\022\027\n\017detectorRootKey\030\004 \001(\014\"-" +
+      "\n\031MnemonicsToCryptoSeedArgs\022\020\n\010mnemonic\030" +
+      "\001 \003(\t\"\206\001\n\033MnemonicsToCryptoSeedResult\022\030\n" +
+      "\020spendKeyRootSeed\030\001 \001(\014\022\033\n\023serialNoKeyRo" +
+      "otSeed\030\002 \001(\014\022\027\n\017viewKeyRootSeed\030\003 \001(\014\022\027\n" +
+      "\017detectorRootKey\030\004 \001(\014\":\n#EntropySeedToP" +
+      "ublicRandRootSeedArgs\022\023\n\013entropySeed\030\001 \001" +
+      "(\014\"C\n%EntropySeedToPublicRandRootSeedRes" +
+      "ult\022\032\n\022publicRandRootSeed\030\001 \001(\014\"5\n!Mnemo" +
+      "nicsToPublicRandRootSeedArgs\022\020\n\010mnemonic" +
+      "\030\001 \003(\t\"A\n#MnemonicsToPublicRandRootSeedR" +
+      "esult\022\032\n\022publicRandRootSeed\030\001 \001(\014\"2\n\032Gen" +
+      "erateSafeCryptoSeedArgs\022\024\n\014privacyLevel\030" +
+      "\001 \001(\005\"\207\001\n\034GenerateSafeCryptoSeedResult\022\030" +
+      "\n\020spendKeyRootSeed\030\001 \001(\014\022\033\n\023serialNoKeyR" +
+      "ootSeed\030\002 \001(\014\022\027\n\017viewKeyRootSeed\030\003 \001(\014\022\027" +
+      "\n\017detectorRootKey\030\004 \001(\014\"\254\001\n+GenerateCryp" +
+      "toKeysAndAddressByRootSeedsArgs\022\030\n\020spend" +
+      "KeyRootSeed\030\001 \001(\014\022\033\n\023serialNoKeyRootSeed" +
+      "\030\002 \001(\014\022\027\n\017viewKeyRootSeed\030\003 \001(\014\022\027\n\017detec" +
+      "torRootKey\030\004 \001(\014\022\024\n\014privacyLevel\030\005 \001(\005\"\245" +
+      "\001\n-GenerateCryptoKeysAndAddressByRootSee" +
+      "dsResult\022\026\n\016spendSecretKey\030\001 \001(\014\022\031\n\021seri" +
+      "alNoSecretKey\030\002 \001(\014\022\025\n\rviewSecretKey\030\003 \001" +
+      "(\014\022\023\n\013detectorKey\030\004 \001(\014\022\025\n\rcryptoAddress" +
+      "\030\005 \001(\014\"L\n\032SequenceNoToPublicRandArgs\022\032\n\022" +
+      "publicRandRootSeed\030\001 \001(\014\022\022\n\nsequenceNo\030\002" +
+      " \001(\r\"2\n\034SequenceNoToPublicRandResult\022\022\n\n" +
+      "publicRand\030\001 \001(\014\"\316\001\n9GenerateCryptoKeysA" +
+      "ndAddressByRootSeedsFromPublicRandArgs\022\030" +
+      "\n\020spendKeyRootSeed\030\001 \001(\014\022\033\n\023serialNoKeyR" +
+      "ootSeed\030\002 \001(\014\022\027\n\017viewKeyRootSeed\030\003 \001(\014\022\027" +
+      "\n\017detectorRootKey\030\004 \001(\014\022\024\n\014privacyLevel\030" +
+      "\005 \001(\005\022\022\n\npublicRand\030\006 \001(\014\"\263\001\n;GenerateCr" +
+      "yptoKeysAndAddressByRootSeedsFromPublicR" +
+      "andResult\022\026\n\016spendSecretKey\030\001 \001(\014\022\031\n\021ser" +
+      "ialNoSecretKey\030\002 \001(\014\022\025\n\rviewSecretKey\030\003 " +
+      "\001(\014\022\023\n\013detectorKey\030\004 \001(\014\022\025\n\rcryptoAddres" +
+      "s\030\005 \001(\014\"<\n#GetCoinAddressFromCryptoAddre" +
+      "ssArgs\022\025\n\rcryptoAddress\030\001 \001(\014\"<\n%GetCoin" +
+      "AddressFromCryptoAddressResult\022\023\n\013coinAd" +
+      "dress\030\001 \001(\014\";\n$ExtractPublicRandFromCoin" +
+      "AddressArgs\022\023\n\013coinAddress\030\001 \001(\014\"<\n&Extr" +
+      "actPublicRandFromCoinAddressResult\022\022\n\npu" +
+      "blicRand\030\001 \001(\014\"M\n#GetAbelAddressFromCryp" +
+      "toAddressArgs\022\025\n\rcryptoAddress\030\001 \001(\014\022\017\n\007" +
+      "chainID\030\002 \001(\005\"<\n%GetAbelAddressFromCrypt" +
+      "oAddressResult\022\023\n\013abelAddress\030\001 \001(\014\":\n#G" +
+      "etCryptoAddressFromAbelAddressArgs\022\023\n\013ab" +
+      "elAddress\030\001 \001(\014\">\n%GetCryptoAddressFromA" +
+      "belAddressResult\022\025\n\rcryptoAddress\030\001 \001(\014\"" +
+      "=\n&GetShortAbelAddressFromAbelAddressArg" +
+      "s\022\023\n\013abelAddress\030\001 \001(\014\"D\n(GetShortAbelAd" +
+      "dressFromAbelAddressResult\022\030\n\020shortAbelA" +
+      "ddress\030\001 \001(\014\"\236\001\n\034CoinReceiveFromTxOutDat" +
+      "aArgs\022\021\n\ttxVersion\030\001 \001(\r\022\021\n\ttxOutData\030\002 " +
+      "\001(\014\022\033\n\023accountPrivacyLevel\030\003 \001(\r\022\033\n\023coin" +
+      "DetectorRootKey\030\004 \001(\014\022\036\n\026coinViewSecretR" +
+      "ootSeed\030\005 \001(\014\"D\n\036CoinReceiveFromTxOutDat" +
+      "aResult\022\017\n\007success\030\001 \001(\010\022\021\n\tcoinValue\030\002 " +
+      "\001(\004\"\261\001\n\030GenerateRawTxRequestArgs\022(\n\ttxIn" +
+      "Descs\030\001 \003(\0132\025.core.TxInDescMessage\022*\n\ntx" +
+      "OutDescs\030\002 \003(\0132\026.core.TxOutDescMessage\0220" +
+      "\n\020txRingBlockDescs\030\003 \003(\0132\026.core.BlockDes" +
+      "cMessage\022\r\n\005txFee\030\004 \001(\003\"*\n\032GenerateRawTx" +
+      "RequestResult\022\014\n\004data\030\001 \001(\014\"\270\001\n\025Generate" +
+      "RawTxDataArgs\022\033\n\023serializedTxRequest\030\001 \001" +
+      "(\014\022\025\n\rprivacyLevels\030\002 \003(\005\022\031\n\021spendKeyRoo" +
+      "tSeeds\030\003 \003(\014\022\034\n\024serialNoKeyRootSeeds\030\004 \003" +
+      "(\014\022\030\n\020viewKeyRootSeeds\030\005 \003(\014\022\030\n\020detector" +
+      "RootKeys\030\006 \003(\014\"5\n\027GenerateRawTxDataResul" +
+      "t\022\014\n\004data\030\001 \001(\014\022\014\n\004txid\030\002 \001(\014\"\213\001\n\034Genera" +
+      "teCoinSerialNumberArgs\022\014\n\004txid\030\001 \001(\014\022\r\n\005" +
+      "index\030\002 \001(\005\022\036\n\026serialNoSecretRootSeed\030\003 " +
+      "\001(\014\022.\n\016ringBlockDescs\030\004 \003(\0132\026.core.Block" +
+      "DescMessage\"6\n\036GenerateCoinSerialNumberR" +
+      "esult\022\024\n\014serialNumber\030\001 \001(\014B0\n\026info.abel" +
+      "ian.sdk.protoZ\026abelian.info/sdk/protob\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18108,158 +25213,242 @@ public final class Core {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_BlockDescMessage_descriptor,
         new java.lang.String[] { "BinData", "Height", });
-    internal_static_core_GenerateSafeCryptoSeedArgs_descriptor =
+    internal_static_core_GenerateEntropySeedArgs_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_core_GenerateEntropySeedArgs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_GenerateEntropySeedArgs_descriptor,
+        new java.lang.String[] { });
+    internal_static_core_GenerateEntropySeedResult_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_core_GenerateEntropySeedResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_GenerateEntropySeedResult_descriptor,
+        new java.lang.String[] { "EntropySeed", });
+    internal_static_core_EntropySeedToMnemonicsArgs_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_core_EntropySeedToMnemonicsArgs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_EntropySeedToMnemonicsArgs_descriptor,
+        new java.lang.String[] { "EntropySeed", });
+    internal_static_core_EntropySeedToMnemonicsResult_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_core_EntropySeedToMnemonicsResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_EntropySeedToMnemonicsResult_descriptor,
+        new java.lang.String[] { "Mnemonic", });
+    internal_static_core_MnemonicsToEntropySeedArgs_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_core_MnemonicsToEntropySeedArgs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_MnemonicsToEntropySeedArgs_descriptor,
+        new java.lang.String[] { "Mnemonic", });
+    internal_static_core_MnemonicsToEntropySeedResult_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_core_MnemonicsToEntropySeedResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_MnemonicsToEntropySeedResult_descriptor,
+        new java.lang.String[] { "EntropySeed", });
+    internal_static_core_EntropySeedToCryptoSeedArgs_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_core_EntropySeedToCryptoSeedArgs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_EntropySeedToCryptoSeedArgs_descriptor,
+        new java.lang.String[] { "EntropySeed", });
+    internal_static_core_EntropySeedToCryptoSeedResult_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_core_EntropySeedToCryptoSeedResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_EntropySeedToCryptoSeedResult_descriptor,
+        new java.lang.String[] { "SpendKeyRootSeed", "SerialNoKeyRootSeed", "ViewKeyRootSeed", "DetectorRootKey", });
+    internal_static_core_MnemonicsToCryptoSeedArgs_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_core_MnemonicsToCryptoSeedArgs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_MnemonicsToCryptoSeedArgs_descriptor,
+        new java.lang.String[] { "Mnemonic", });
+    internal_static_core_MnemonicsToCryptoSeedResult_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_core_MnemonicsToCryptoSeedResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_MnemonicsToCryptoSeedResult_descriptor,
+        new java.lang.String[] { "SpendKeyRootSeed", "SerialNoKeyRootSeed", "ViewKeyRootSeed", "DetectorRootKey", });
+    internal_static_core_EntropySeedToPublicRandRootSeedArgs_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_core_EntropySeedToPublicRandRootSeedArgs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_EntropySeedToPublicRandRootSeedArgs_descriptor,
+        new java.lang.String[] { "EntropySeed", });
+    internal_static_core_EntropySeedToPublicRandRootSeedResult_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_core_EntropySeedToPublicRandRootSeedResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_EntropySeedToPublicRandRootSeedResult_descriptor,
+        new java.lang.String[] { "PublicRandRootSeed", });
+    internal_static_core_MnemonicsToPublicRandRootSeedArgs_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_core_MnemonicsToPublicRandRootSeedArgs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_MnemonicsToPublicRandRootSeedArgs_descriptor,
+        new java.lang.String[] { "Mnemonic", });
+    internal_static_core_MnemonicsToPublicRandRootSeedResult_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_core_MnemonicsToPublicRandRootSeedResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_MnemonicsToPublicRandRootSeedResult_descriptor,
+        new java.lang.String[] { "PublicRandRootSeed", });
+    internal_static_core_GenerateSafeCryptoSeedArgs_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_core_GenerateSafeCryptoSeedArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateSafeCryptoSeedArgs_descriptor,
         new java.lang.String[] { "PrivacyLevel", });
     internal_static_core_GenerateSafeCryptoSeedResult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_core_GenerateSafeCryptoSeedResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateSafeCryptoSeedResult_descriptor,
         new java.lang.String[] { "SpendKeyRootSeed", "SerialNoKeyRootSeed", "ViewKeyRootSeed", "DetectorRootKey", });
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsArgs_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsArgs_descriptor,
         new java.lang.String[] { "SpendKeyRootSeed", "SerialNoKeyRootSeed", "ViewKeyRootSeed", "DetectorRootKey", "PrivacyLevel", });
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsResult_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsResult_descriptor,
         new java.lang.String[] { "SpendSecretKey", "SerialNoSecretKey", "ViewSecretKey", "DetectorKey", "CryptoAddress", });
+    internal_static_core_SequenceNoToPublicRandArgs_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_core_SequenceNoToPublicRandArgs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_SequenceNoToPublicRandArgs_descriptor,
+        new java.lang.String[] { "PublicRandRootSeed", "SequenceNo", });
+    internal_static_core_SequenceNoToPublicRandResult_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_core_SequenceNoToPublicRandResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_core_SequenceNoToPublicRandResult_descriptor,
+        new java.lang.String[] { "PublicRand", });
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandArgs_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandArgs_descriptor,
         new java.lang.String[] { "SpendKeyRootSeed", "SerialNoKeyRootSeed", "ViewKeyRootSeed", "DetectorRootKey", "PrivacyLevel", "PublicRand", });
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandResult_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandResult_descriptor,
         new java.lang.String[] { "SpendSecretKey", "SerialNoSecretKey", "ViewSecretKey", "DetectorKey", "CryptoAddress", });
     internal_static_core_GetCoinAddressFromCryptoAddressArgs_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_core_GetCoinAddressFromCryptoAddressArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GetCoinAddressFromCryptoAddressArgs_descriptor,
         new java.lang.String[] { "CryptoAddress", });
     internal_static_core_GetCoinAddressFromCryptoAddressResult_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_core_GetCoinAddressFromCryptoAddressResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GetCoinAddressFromCryptoAddressResult_descriptor,
         new java.lang.String[] { "CoinAddress", });
     internal_static_core_ExtractPublicRandFromCoinAddressArgs_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_core_ExtractPublicRandFromCoinAddressArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_ExtractPublicRandFromCoinAddressArgs_descriptor,
         new java.lang.String[] { "CoinAddress", });
     internal_static_core_ExtractPublicRandFromCoinAddressResult_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_core_ExtractPublicRandFromCoinAddressResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_ExtractPublicRandFromCoinAddressResult_descriptor,
         new java.lang.String[] { "PublicRand", });
     internal_static_core_GetAbelAddressFromCryptoAddressArgs_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_core_GetAbelAddressFromCryptoAddressArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GetAbelAddressFromCryptoAddressArgs_descriptor,
         new java.lang.String[] { "CryptoAddress", "ChainID", });
     internal_static_core_GetAbelAddressFromCryptoAddressResult_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_core_GetAbelAddressFromCryptoAddressResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GetAbelAddressFromCryptoAddressResult_descriptor,
         new java.lang.String[] { "AbelAddress", });
     internal_static_core_GetCryptoAddressFromAbelAddressArgs_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_core_GetCryptoAddressFromAbelAddressArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GetCryptoAddressFromAbelAddressArgs_descriptor,
         new java.lang.String[] { "AbelAddress", });
     internal_static_core_GetCryptoAddressFromAbelAddressResult_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_core_GetCryptoAddressFromAbelAddressResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GetCryptoAddressFromAbelAddressResult_descriptor,
         new java.lang.String[] { "CryptoAddress", });
     internal_static_core_GetShortAbelAddressFromAbelAddressArgs_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_core_GetShortAbelAddressFromAbelAddressArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GetShortAbelAddressFromAbelAddressArgs_descriptor,
         new java.lang.String[] { "AbelAddress", });
     internal_static_core_GetShortAbelAddressFromAbelAddressResult_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_core_GetShortAbelAddressFromAbelAddressResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GetShortAbelAddressFromAbelAddressResult_descriptor,
         new java.lang.String[] { "ShortAbelAddress", });
-    internal_static_core_DecodeCoinAddressFromTxOutDataArgs_descriptor =
-      getDescriptor().getMessageTypes().get(19);
-    internal_static_core_DecodeCoinAddressFromTxOutDataArgs_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_core_DecodeCoinAddressFromTxOutDataArgs_descriptor,
-        new java.lang.String[] { "TxVersion", "TxOutData", });
-    internal_static_core_DecodeCoinAddressFromTxOutDataResult_descriptor =
-      getDescriptor().getMessageTypes().get(20);
-    internal_static_core_DecodeCoinAddressFromTxOutDataResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_core_DecodeCoinAddressFromTxOutDataResult_descriptor,
-        new java.lang.String[] { "CoinAddress", });
     internal_static_core_CoinReceiveFromTxOutDataArgs_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_core_CoinReceiveFromTxOutDataArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_CoinReceiveFromTxOutDataArgs_descriptor,
         new java.lang.String[] { "TxVersion", "TxOutData", "AccountPrivacyLevel", "CoinDetectorRootKey", "CoinViewSecretRootSeed", });
     internal_static_core_CoinReceiveFromTxOutDataResult_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_core_CoinReceiveFromTxOutDataResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_CoinReceiveFromTxOutDataResult_descriptor,
         new java.lang.String[] { "Success", "CoinValue", });
     internal_static_core_GenerateRawTxRequestArgs_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_core_GenerateRawTxRequestArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateRawTxRequestArgs_descriptor,
         new java.lang.String[] { "TxInDescs", "TxOutDescs", "TxRingBlockDescs", "TxFee", });
     internal_static_core_GenerateRawTxRequestResult_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_core_GenerateRawTxRequestResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateRawTxRequestResult_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_core_GenerateRawTxDataArgs_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_core_GenerateRawTxDataArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateRawTxDataArgs_descriptor,
         new java.lang.String[] { "SerializedTxRequest", "PrivacyLevels", "SpendKeyRootSeeds", "SerialNoKeyRootSeeds", "ViewKeyRootSeeds", "DetectorRootKeys", });
     internal_static_core_GenerateRawTxDataResult_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_core_GenerateRawTxDataResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateRawTxDataResult_descriptor,
         new java.lang.String[] { "Data", "Txid", });
     internal_static_core_GenerateCoinSerialNumberArgs_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_core_GenerateCoinSerialNumberArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateCoinSerialNumberArgs_descriptor,
         new java.lang.String[] { "Txid", "Index", "SerialNoSecretRootSeed", "RingBlockDescs", });
     internal_static_core_GenerateCoinSerialNumberResult_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_core_GenerateCoinSerialNumberResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_core_GenerateCoinSerialNumberResult_descriptor,

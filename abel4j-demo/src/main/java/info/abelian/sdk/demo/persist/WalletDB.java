@@ -1,12 +1,14 @@
 package info.abelian.sdk.demo.persist;
 
 import java.sql.SQLException;
+import java.util.AbstractMap;
 import java.util.Map;
 
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 
 import info.abelian.sdk.common.AbelBase;
+import info.abelian.sdk.common.AbelException;
 import info.abelian.sdk.common.Bytes;
 import info.abelian.sdk.demo.Demo;
 import info.abelian.sdk.wallet.Account;
@@ -51,7 +53,7 @@ public abstract class WalletDB {
     }
   }
 
-  protected abstract void initTables() throws SQLException;
+  protected abstract void initTables() throws SQLException, AbelException;
 
   public static class ColdWalletDB extends WalletDB {
 
@@ -62,15 +64,15 @@ public abstract class WalletDB {
     SignerAccountTable signerAccountTable;
 
     @Override
-    protected void initTables() throws SQLException {
+    protected void initTables() throws SQLException, AbelException {
       initSignerAccountTable();
     }
     
-    private void initSignerAccountTable() throws SQLException {
+    private void initSignerAccountTable() throws SQLException, AbelException {
       signerAccountTable = new SignerAccountTable(connectionSource);
       // Save all builtin accounts as signer accounts to the table.
-      for (Account account : Demo.getBuiltinAccounts().values()) {
-        signerAccountTable.addAccountIfNotExists(account);
+      for (Map.Entry<String,Account> entry: Demo.getBuiltinAccounts().entrySet()) {
+        signerAccountTable.addAccountIfNotExists(entry.getKey(),entry.getValue());
       }
     }
 
@@ -81,8 +83,9 @@ public abstract class WalletDB {
       return signerAccountTable.getAllSignerAccounts();
     }
 
-    public Account getSignerAccount(int accountID) throws SQLException {
-      return signerAccountTable.getAccount(accountID);
+    public AbstractMap.SimpleEntry<String,Account> getSignerAccount(String accountID) throws SQLException {
+      Account account=  signerAccountTable.getAccount(accountID);
+      return new AbstractMap.SimpleEntry<String,Account>(accountID,account);
     }
   }
 
@@ -99,17 +102,17 @@ public abstract class WalletDB {
     }
 
     @Override
-    protected void initTables() throws SQLException {
+    protected void initTables() throws SQLException, AbelException {
       initViewerAccountTable();
       initCoinTable();
       initTxTable();
     }
 
-    private void initViewerAccountTable() throws SQLException {
+    private void initViewerAccountTable() throws SQLException, AbelException {
       viewerAccountTable = new ViewerAccountTable(connectionSource);
       // Save all builtin accounts as viewer accounts to the table.
-      for (Account account : Demo.getBuiltinAccounts().values()) {
-        viewerAccountTable.addAccountIfNotExists(account.getViewAccount());
+      for (Map.Entry<String,Account> entry : Demo.getBuiltinAccounts().entrySet()) {
+        viewerAccountTable.addAccountIfNotExists(entry.getKey(),entry.getValue().getViewAccount());
       }
     }
 
@@ -125,7 +128,7 @@ public abstract class WalletDB {
       return viewerAccountTable.getCount();
     }
 
-    public ViewAccount[] getAllViewerAccounts() throws SQLException {
+    public AbstractMap.SimpleEntry<String,ViewAccount>[] getAllViewerAccounts() throws SQLException {
       return viewerAccountTable.getAllViewerAccounts();
     }
 
@@ -133,8 +136,8 @@ public abstract class WalletDB {
       return coinTable.getCount();
     }
 
-    public void addCoinIfNotExists(Coin coin) throws SQLException {
-      coinTable.addCoinIfNotExists(coin);
+    public void addCoinIfNotExists(Coin coin,String ownerAccountID) throws SQLException {
+      coinTable.addCoinIfNotExists(coin,ownerAccountID);
     }
 
     public Coin[] getAllUnspentCoins() throws SQLException {

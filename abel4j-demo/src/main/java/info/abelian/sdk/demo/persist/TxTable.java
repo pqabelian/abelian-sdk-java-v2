@@ -69,7 +69,7 @@ public class TxTable {
 
         String[] signerAccountIDs = new String[unsignedRawTx.signerAccountIDs.length];
         for (int i = 0; i < unsignedRawTx.signerAccountIDs.length; i++) {
-            signerAccountIDs[i] = Integer.toString(unsignedRawTx.signerAccountIDs[i]);
+            signerAccountIDs[i] = unsignedRawTx.signerAccountIDs[i];
         }
 
         TxRow txRow = new TxRow(txMd5, unsignedRawTx.data.toHex(), String.join(",", signerAccountIDs), null, false);
@@ -104,7 +104,7 @@ public class TxTable {
         }
 
         txRow.signedRawTxDataHex = signedRawTx.data.toHex();
-        txRow.txid = signedRawTx.txid.toHex();
+        txRow.txid = signedRawTx.txid;
         dao.update(txRow);
     }
 
@@ -113,11 +113,7 @@ public class TxTable {
             return null;
         }
 
-        String[] signerAccountIDStrs = txRow.signerAccountIDs.split(",");
-        int[] signerAccountIDs = new int[signerAccountIDStrs.length];
-        for (int j = 0; j < signerAccountIDStrs.length; j++) {
-            signerAccountIDs[j] = Integer.parseInt(signerAccountIDStrs[j]);
-        }
+        String[] signerAccountIDs = txRow.signerAccountIDs.split(",");
         return new UnsignedRawTx(new Bytes(txRow.unsignedRawTxDataHex), signerAccountIDs);
     }
 
@@ -126,7 +122,7 @@ public class TxTable {
         if (txRow == null || txRow.signedRawTxDataHex == null) {
             return null;
         }
-        return new SignedRawTx(new Bytes(txRow.signedRawTxDataHex), new Bytes(txRow.txid));
+        return new SignedRawTx(new Bytes(txRow.signedRawTxDataHex), txRow.txid);
     }
 
     public void setSubmitted(String txMd5) throws SQLException {

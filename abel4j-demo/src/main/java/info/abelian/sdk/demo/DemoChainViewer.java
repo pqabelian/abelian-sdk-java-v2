@@ -6,7 +6,9 @@ import info.abelian.sdk.rpc.BlockInfo;
 import info.abelian.sdk.rpc.TxInfo;
 import info.abelian.sdk.wallet.ChainViewer;
 import info.abelian.sdk.wallet.Coin;
+import info.abelian.sdk.wallet.ViewAccount;
 
+import java.util.AbstractMap;
 import java.util.Arrays;
 
 public class DemoChainViewer {
@@ -89,14 +91,15 @@ public class DemoChainViewer {
 
     for (Bytes txid: blockInfo.txHashes) {
       System.out.printf("\n==> Get all viewable coins in tx %s.\n", txid);
-      Coin[] coins = viewer.getCoins(txid);
+      AbstractMap.SimpleEntry<Coin, AbstractMap.SimpleEntry<String,ViewAccount>>[]
+              coins = viewer.getCoins(txid);
       if (coins == null) {
         System.out.printf("Failed to get coins for txid %s.\n", txid);
         continue;
       }
-      for (Coin coin : coins) {
+      for (AbstractMap.SimpleEntry<Coin, AbstractMap.SimpleEntry<String, ViewAccount>> coin : coins) {
         System.out.printf("Found: 💰 %s\n", coin);
-        db.addCoinIfNotExists(coin);
+        db.addCoinIfNotExists(coin.getKey(),coin.getValue().getKey());
       }
     }
   }
@@ -129,15 +132,16 @@ public class DemoChainViewer {
     // Get all coins in the block and save them to the hot wallet database.
     HotWalletDB db = Demo.getHotWalletDB();
     for (Bytes txid : blockInfo.txHashes) {
-      Coin[] coins = viewer.getCoins(txid);
+      AbstractMap.SimpleEntry<Coin, AbstractMap.SimpleEntry<String,ViewAccount>>[]
+              coins = viewer.getCoins(txid);
       if (coins == null) {
         System.out.printf("Failed to get coins for txid %s.\n", txid);
         continue;
       }
       System.out.printf("--> Found %d coin%s in tx %s.\n", coins.length, coins.length > 1 ? "s" : "", txid);
-      for (Coin coin : coins) {
+      for (AbstractMap.SimpleEntry<Coin, AbstractMap.SimpleEntry<String,ViewAccount>> coin : coins) {
         System.out.printf("💰 %s\n", coin);
-        db.addCoinIfNotExists(coin);
+        db.addCoinIfNotExists(coin.getKey(),coin.getValue().getKey());
       }
     }
   }

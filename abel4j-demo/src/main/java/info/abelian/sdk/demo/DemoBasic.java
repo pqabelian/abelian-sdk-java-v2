@@ -1,6 +1,11 @@
 package info.abelian.sdk.demo;
 
-import info.abelian.sdk.common.Bytes;
+import info.abelian.sdk.common.*;
+import info.abelian.sdk.common.CryptoSeed.EntropySeed;
+import info.abelian.sdk.common.CryptoSeed.SpendSecretRootSeed;
+import info.abelian.sdk.common.CryptoSeed.SerialNoSecretRootSeed;
+import info.abelian.sdk.common.CryptoSeed.ViewSecretRootSeed;
+import info.abelian.sdk.common.CryptoSeed.DetectorRootKey;
 import info.abelian.sdk.proto.Core.GenerateCryptoKeysAndAddressByRootSeedsResult;
 import info.abelian.sdk.rpc.AbecRPCClient;
 import info.abelian.sdk.rpc.AbecRPCClient.JsonResponse;
@@ -9,65 +14,53 @@ import info.abelian.sdk.rpc.ChainInfo;
 import info.abelian.sdk.rpc.TxInfo;
 import info.abelian.sdk.rpc.TxVin;
 import info.abelian.sdk.rpc.TxVout;
-import info.abelian.sdk.wallet.Crypto;
-import info.abelian.sdk.wallet.PrivacyLevel;
 
 public class DemoBasic {
 
   // Demo Crypto.
   public static void demoCrypto(String[] args) throws Exception {
-    System.out.println("\n==> Generate crypto seeds for FULLY-PRIVATE.");
-    Bytes[] rootSeeds = Crypto.generateSeed(PrivacyLevel.FULLY_PRIVATE);
-    System.out.println("    PrivacyLevel = " + PrivacyLevel.FULLY_PRIVATE);
-    System.out.println("    SpendSecretRootSeed = " + Utils.summary(rootSeeds[0]));
-    System.out.println("    SerialNoSecretRootSeed = " + Utils.summary(rootSeeds[1]));
-    System.out.println("    ViewSecretRootSeed = " + Utils.summary(rootSeeds[2]));
-    System.out.println("    DetectorRootKey = " + Utils.summary(rootSeeds[3]));
+    System.out.println("\n==> Generate entropy seed.");
+    EntropySeed entropySeed = Crypto.generateEntropySeed();
+    System.out.println("    EntropySeed = " + Utils.summary(entropySeed));
 
-    System.out.println("\n    Generate different crypto address with the same root seeds for FULLY-PRIVATE:");
+    System.out.println("\n==> Convert entropy seed to mnemonics.");
+    String[] mnemonics = Crypto.entropySeedToMnemonics(entropySeed);
+    System.out.println("    Mnemonics = " + String.join(" ", mnemonics));
+
+    System.out.println("\n==> Derive crypto seeds from entropy seed.");
+    Bytes[] cryptoSeeds = Crypto.entropySeedToCryptoSeeds(entropySeed);
+    System.out.println("    SpendSecretRootSeed = " + Utils.summary(cryptoSeeds[0]));
+    System.out.println("    SerialNoSecretRootSeed = " + Utils.summary(cryptoSeeds[1]));
+    System.out.println("    ViewSecretRootSeed = " + Utils.summary(cryptoSeeds[2]));
+    System.out.println("    DetectorRootKey = " + Utils.summary(cryptoSeeds[3]));
+
+    System.out.println("\n    Generate a FULLY-PRIVATE crypto address from above crypto seeds:");
     GenerateCryptoKeysAndAddressByRootSeedsResult ckaa = Crypto.generateKeysAndAddress(
             PrivacyLevel.FULLY_PRIVATE,
-            new Bytes(rootSeeds[0]),
-            new Bytes(rootSeeds[1]),
-            new Bytes(rootSeeds[2]),
-            new Bytes(rootSeeds[3])
+             new SpendSecretRootSeed(cryptoSeeds[0]),
+             new SerialNoSecretRootSeed(cryptoSeeds[1]),
+             new ViewSecretRootSeed(cryptoSeeds[2]),
+             new DetectorRootKey(cryptoSeeds[3])
     );
-    System.out.println("    CryptoAddress[0] = " + Utils.summary(ckaa.getCryptoAddress()));
-    ckaa = Crypto.generateKeysAndAddress(
-            PrivacyLevel.FULLY_PRIVATE,
-            new Bytes(rootSeeds[0]),
-            new Bytes(rootSeeds[1]),
-            new Bytes(rootSeeds[2]),
-            new Bytes(rootSeeds[3])
-    );
-    System.out.println("    CryptoAddress[1] = " + Utils.summary(ckaa.getCryptoAddress()));
-
-
-    System.out.println("\n==> Generate crypto seeds for PSEUDO-PRIVATE.");
-    rootSeeds = Crypto.generateSeed(PrivacyLevel.PSEUDO_PRIVATE);
     System.out.println("    PrivacyLevel = " + PrivacyLevel.FULLY_PRIVATE);
-    System.out.println("    SpendSecretRootSeed = " + Utils.summary(rootSeeds[0]));
-    System.out.println("    SerialNoSecretRootSeed = " + Utils.summary(rootSeeds[1]));
-    System.out.println("    ViewSecretRootSeed = " + Utils.summary(rootSeeds[2]));
-    System.out.println("    DetectorRootKey = " + Utils.summary(rootSeeds[3]));
-
-    System.out.println("\n    Generate different crypto address with the same root seeds for PSEUDO-PRIVATE.:");
-    ckaa = Crypto.generateKeysAndAddress(
-            PrivacyLevel.PSEUDO_PRIVATE,
-             new Bytes(rootSeeds[0]),
-             new Bytes(rootSeeds[1]),
-             new Bytes(rootSeeds[2]),
-             new Bytes(rootSeeds[3])
-    );
     System.out.println("    CryptoAddress[0] = " + Utils.summary(ckaa.getCryptoAddress()));
+    Bytes abelAddress = Crypto.getAbelAddressFromCryptoAddress(1,new Bytes(ckaa.getCryptoAddress().toByteArray()));
+    System.out.println("    AbelAddress[0] = " + Utils.summary(abelAddress));
+    Bytes shortAddress = Crypto.getShortAbelAddressFromAbelAddress(abelAddress);
+    System.out.println("    ShortAddress[0] = " + Utils.summary(shortAddress));
+
+    System.out.println("\n    Generate a PSEUDO-PRIVATE crypto address (from the same seeds):");
     ckaa = Crypto.generateKeysAndAddress(
             PrivacyLevel.PSEUDO_PRIVATE,
-            new Bytes(rootSeeds[0]),
-            new Bytes(rootSeeds[1]),
-            new Bytes(rootSeeds[2]),
-            new Bytes(rootSeeds[3])
+            new SpendSecretRootSeed(cryptoSeeds[0]),
+            new DetectorRootKey(cryptoSeeds[3])
     );
+    System.out.println("    PrivacyLevel = " + PrivacyLevel.PSEUDO_PRIVATE);
     System.out.println("    CryptoAddress[1] = " + Utils.summary(ckaa.getCryptoAddress()));
+    abelAddress = Crypto.getAbelAddressFromCryptoAddress(1,new Bytes(ckaa.getCryptoAddress().toByteArray()));
+    System.out.println("    AbelAddress[1] = " + Utils.summary(abelAddress));
+    shortAddress = Crypto.getShortAbelAddressFromAbelAddress(abelAddress);
+    System.out.println("    ShortAddress[1] = " + Utils.summary(shortAddress));
   }
 
   // Demo AbecRPCClient.
@@ -104,7 +97,7 @@ public class DemoBasic {
 
     System.out.println("\n--> Call with wrong parameters.");
     tasks.doAnyRPCCall("getinfo", 0, "0x0000000");
-    
+
     System.out.printf("\n==> Call builtin member methods of %s.\n", AbecRPCClient.class.getSimpleName());
     System.out.println("\n--> Get chain info by client.getChainInfo().");
     ChainInfo ci = client.getChainInfo();

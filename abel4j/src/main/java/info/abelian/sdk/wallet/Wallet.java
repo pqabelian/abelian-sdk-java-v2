@@ -1,5 +1,6 @@
 package info.abelian.sdk.wallet;
 
+import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,43 +28,37 @@ public abstract class Wallet extends AbelBase {
         viewAccounts.put(key, viewAccount);
     }
 
-
     public void addAccount(String key, Account account) {
         accounts.put(key, account);
         viewAccounts.put(key, account.getViewAccount());
     }
 
-    public ViewAccount getOwnedViewAccount(Coin coin) throws AbelException {
-        try {
-            for (Map.Entry<String, ViewAccount> entry : viewAccounts.entrySet()) {
-                ViewAccount viewAccount = entry.getValue();
-                Coin _coin = viewAccount.coinReceive(coin.blockid, coin.blockHeight, coin.txVersion, coin.id.txid, coin.id.index, coin.txOutData);
-                if (_coin != null) {
-                    return viewAccount;
-                }
+    public AbstractMap.SimpleEntry<String, ViewAccount> getOwnedViewAccount(Coin coin) throws AbelException {
+        for (Map.Entry<String, ViewAccount> entry : viewAccounts.entrySet()) {
+            ViewAccount viewAccount = entry.getValue();
+            Coin _coin = viewAccount.coinReceive(coin.blockid, coin.blockHeight, coin.txVersion, coin.id.txid, coin.id.index, coin.txOutData);
+            if (_coin != null) {
+                return new AbstractMap.SimpleEntry<String, ViewAccount>(entry.getKey(), viewAccount);
             }
-            return null;
-        } catch (Exception e) {
-            throw new AbelException(e);
         }
+        return null;
     }
 
-    public Account getSignerAccount(int accountID) {
-        return accounts.get(Integer.toString(accountID));
+    public Account getSignerAccount(String accountID) {
+        return accounts.get(accountID);
     }
 
-    public Coin coinReceive(Bytes blockid, long blockHeight, int txVersion, Bytes txid, int index, Bytes txOutData) throws AbelException {
-        try {
-            for (Map.Entry<String, ViewAccount> entry : viewAccounts.entrySet()) {
-                ViewAccount viewAccount = entry.getValue();
-                Coin coin = viewAccount.coinReceive(blockid, blockHeight, txVersion, txid, index, txOutData);
-                if (coin != null) {
-                    return coin;
-                }
+    public AbstractMap.SimpleEntry<Coin, AbstractMap.SimpleEntry<String, ViewAccount>> coinReceive(Bytes blockid, long blockHeight, int txVersion, Bytes txid, int index, Bytes txOutData) throws AbelException {
+        for (Map.Entry<String, ViewAccount> entry : viewAccounts.entrySet()) {
+            ViewAccount viewAccount = entry.getValue();
+            Coin coin = viewAccount.coinReceive(blockid, blockHeight, txVersion, txid, index, txOutData);
+            if (coin != null) {
+                return new AbstractMap.SimpleEntry<Coin, AbstractMap.SimpleEntry<String, ViewAccount>>(
+                        coin,
+                        new AbstractMap.SimpleEntry<String, ViewAccount>(entry.getKey(), entry.getValue())
+                );
             }
-            return null;
-        } catch (Exception e) {
-            throw new AbelException(e);
         }
+        return null;
     }
 }

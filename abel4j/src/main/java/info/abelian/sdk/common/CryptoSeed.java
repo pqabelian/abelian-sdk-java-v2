@@ -1,6 +1,4 @@
-package info.abelian.sdk.wallet;
-
-import info.abelian.sdk.common.Bytes;
+package info.abelian.sdk.common;
 
 public abstract class CryptoSeed extends Bytes {
     public static final int LENGTH = 64;
@@ -26,15 +24,15 @@ public abstract class CryptoSeed extends Bytes {
         }
         return super.toString();
     }
+    public static class EntropySeed extends CryptoSeed {
 
-    public static class SpendKeyRootSeed extends CryptoSeed {
+        public static final int LENGTH = 32;
 
-
-        public SpendKeyRootSeed(byte[] data) {
+        public EntropySeed(byte[] data) {
             super(data);
         }
 
-        public SpendKeyRootSeed(Bytes key) {
+        public EntropySeed(Bytes key) {
             super(key);
         }
 
@@ -49,14 +47,36 @@ public abstract class CryptoSeed extends Bytes {
         }
     }
 
-    public static class SerialNoKeyRootSeed extends CryptoSeed {
+    public static class SpendSecretRootSeed extends CryptoSeed {
 
 
-        public SerialNoKeyRootSeed(byte[] data) {
+        public SpendSecretRootSeed(byte[] data) {
             super(data);
         }
 
-        public SerialNoKeyRootSeed(Bytes key) {
+        public SpendSecretRootSeed(Bytes key) {
+            super(key);
+        }
+
+        @Override
+        protected boolean isValid() {
+            return getLength() == LENGTH;
+        }
+
+        @Override
+        protected boolean isSecret() {
+            return true;
+        }
+    }
+
+    public static class SerialNoSecretRootSeed extends CryptoSeed {
+
+
+        public SerialNoSecretRootSeed(byte[] data) {
+            super(data);
+        }
+
+        public SerialNoSecretRootSeed(Bytes key) {
             super(key);
         }
 
@@ -71,14 +91,14 @@ public abstract class CryptoSeed extends Bytes {
         }
     }
 
-    public static class ViewKeyRootSeed extends CryptoSeed {
+    public static class ViewSecretRootSeed extends CryptoSeed {
 
 
-        public ViewKeyRootSeed(byte[] data) {
+        public ViewSecretRootSeed(byte[] data) {
             super(data);
         }
 
-        public ViewKeyRootSeed(Bytes key) {
+        public ViewSecretRootSeed(Bytes key) {
             super(key);
         }
 
@@ -99,6 +119,25 @@ public abstract class CryptoSeed extends Bytes {
         }
 
         public DetectorRootKey(Bytes key) {
+            super(key);
+        }
+
+        @Override
+        protected boolean isValid() {
+            return getLength() == LENGTH;
+        }
+
+        @Override
+        protected boolean isSecret() {
+            return false;
+        }
+    }
+    public static class PublicRandRootSeed extends CryptoSeed {
+        public PublicRandRootSeed(byte[] data) {
+            super(data);
+        }
+
+        public PublicRandRootSeed(Bytes key) {
             super(key);
         }
 

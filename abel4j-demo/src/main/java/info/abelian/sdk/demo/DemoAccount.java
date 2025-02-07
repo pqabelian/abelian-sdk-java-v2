@@ -2,43 +2,92 @@ package info.abelian.sdk.demo;
 
 import java.util.Map;
 
-import info.abelian.sdk.common.AbelAddress;
+import info.abelian.sdk.common.AbelBase;
+import info.abelian.sdk.common.CryptoSeed.EntropySeed;
 import info.abelian.sdk.common.AbelException;
+
+import info.abelian.sdk.common.PrivacyLevel;
+import info.abelian.sdk.wallet.AbelAddress;
+import info.abelian.sdk.wallet.ViewAccount;
 import info.abelian.sdk.wallet.Account;
-import info.abelian.sdk.wallet.PrivacyLevel;
+import info.abelian.sdk.wallet.SeqAccount;
 
 public class DemoAccount {
 
-    // Demo creating new accounts and loading existing accounts.
+    // Demo creating new accounts and loading built-in accounts.
     public static void demoAccount(String[] args) throws Exception {
         int chainID = Demo.getDefaultChainID();
 
-        System.out.println("\n==> Create accounts.");
-        Account[] fullyPrivateAccounts = new Account[3];
-        for (int i = 0; i < fullyPrivateAccounts.length; i++) {
-            System.out.printf("\n--> FullyPrivateAccounts[%d]\n", i);
-            fullyPrivateAccounts[i] = Account.generateAccount(chainID, PrivacyLevel.FULLY_PRIVATE);
-            printAccountInfo(fullyPrivateAccounts[i]);
-
-            AbelAddress abelAddress = fullyPrivateAccounts[i].generateAbelAddress();
-            System.out.printf("\n--> Fully-private AbelAddress of FullyPrivateAccounts[%s]\n", abelAddress);
-
-            AbelAddress anotherAbelAddress = fullyPrivateAccounts[i].generateAbelAddress();
-            System.out.printf("\n--> another Fully-private AbelAddress of FullyPrivateAccounts[%s]\n", anotherAbelAddress);
+        PrivacyLevel privacyLevel = PrivacyLevel.PSEUDO_PRIVATE;
+        System.out.println("\n==> Create pseudo-private accounts from scratch.");
+        Account[] accounts = new Account[3];
+        for (int i = 0; i < accounts.length; i++) {
+            System.out.printf("\n--> Account[%d]\n", i);
+            accounts[i] = Account.generateAccount(chainID, privacyLevel);
+            printAccountInfo(accounts[i]);
         }
 
-        Account[] pseudoPrivateAccounts = new Account[3];
-        for (int i = 0; i < pseudoPrivateAccounts.length; i++) {
-            System.out.printf("\n--> PseudoPrivateAccounts[%d]\n", i);
-            pseudoPrivateAccounts[i] = Account.generateAccount(chainID, PrivacyLevel.PSEUDO_PRIVATE);
-            printAccountInfo(pseudoPrivateAccounts[i]);
-
-            AbelAddress abelAddress = pseudoPrivateAccounts[i].generateAbelAddress();
-            System.out.printf("\n--> Pseudo-private AbelAddress of PseudoPrivateAccounts[%s]\n", abelAddress);
-
-            AbelAddress anotherAbelAddress = pseudoPrivateAccounts[i].generateAbelAddress();
-            System.out.printf("\n--> another Pseudo-private AbelAddress of PseudoPrivateAccounts[%s]\n", anotherAbelAddress);
+        System.out.println("\n==> Load signer accounts from entropy seed.");
+        EntropySeed[] entropySeeds = new EntropySeed[accounts.length];
+        Account[] signerAccounts = new Account[accounts.length];
+        for (int i = 0; i < accounts.length; i++) {
+            System.out.printf("\n--> Account[%d]\n", i);
+            entropySeeds[i] = Account.generateEntropySeed();
+            signerAccounts[i] = Account.loadAccount(chainID, privacyLevel, entropySeeds[i]);
+            printAccountInfo(signerAccounts[i]);
         }
+
+        System.out.println("\n==> Load viewer accounts from serial number root seed, view key and address.");
+        ViewAccount[] viewerAccounts = new ViewAccount[accounts.length];
+        for (int i = 0; i < accounts.length; i++) {
+            System.out.printf("\n--> ViewAccount[%d]\n", i);
+            viewerAccounts[i] = ViewAccount.loadViewAccount(chainID,
+                    accounts[i].getPrivacyLevel(),
+                    accounts[i].getSerialNoSecretRootSeed(),
+                    accounts[i].getViewKeyRootSeed(),
+                    accounts[i].getDetectorRootKey());
+            printAccountInfo(viewerAccounts[i]);
+        }
+
+
+        System.out.println("\n==> Load sequence accounts from entropy seed.");
+        SeqAccount[] seqAccounts = new SeqAccount[accounts.length];
+        for (int i = 0; i < accounts.length; i++) {
+            seqAccounts[i] = SeqAccount.loadSeqAccount(chainID,
+                    accounts[i].getPrivacyLevel(),
+                    entropySeeds[i]);
+            int seqNo = 0;
+            System.out.printf("\n--> Generate abel address with sequence %d for SeqAccount[%d]\n", seqNo, i);
+            AbelAddress abelAddress = seqAccounts[i].generateAbelAddress(seqNo);
+            System.out.println("    Address = " + Utils.summary(abelAddress));
+
+            System.out.printf("\n--> Generate abel address with sequence %d for SeqAccount[%d] again\n", seqNo, i);
+            AbelAddress abelAddress2 = seqAccounts[i].generateAbelAddress(seqNo);
+            System.out.println("    Address = " + Utils.summary(abelAddress2));
+        }
+
+
+        System.out.println("\n==> Export accounts generated from entropy seed.");
+        String outputDir = AbelBase.getEnvPath("accounts");
+        java.io.File dir = new java.io.File(outputDir);
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        for (int i = 0; i < entropySeeds.length; i++) {
+            String filePath = String.format("%s/chain-%d-account-%d.mnemonics", outputDir, chainID, i);
+
+            java.io.File file = new java.io.File(filePath);
+            if (file.exists()) {
+                file.delete();
+                file.createNewFile();
+            }
+
+            String[] mnemonics = Account.entropySeedToMnemonics(entropySeeds[i]);
+            try (java.io.PrintWriter writer = new java.io.PrintWriter(filePath)) {
+                writer.println(String.join(" ", mnemonics));
+            }
+        }
+        System.out.printf("Successfully export all accounts to %s.\n", outputDir);
 
         System.out.println("\n==> Show builtin accounts.");
         Map<String, Account> builtinAccounts = Demo.getBuiltinAccounts();
@@ -49,11 +98,19 @@ public class DemoAccount {
     }
 
     private static void printAccountInfo(Account account) throws AbelException {
-        System.out.println("    SpendKeyRootSeed = " + account.getSpendKeyRootSeed());
+        System.out.println("    SpendKeyRootSeed = " + account.getSpendSecretRootSeed());
         if (account.getPrivacyLevel() == PrivacyLevel.FULLY_PRIVATE) {
-            System.out.println("    SerialNoKeyRootSeed = " + account.getSerialNoKeyRootSeed());
+            System.out.println("    SerialNoKeyRootSeed = " + account.getSerialNoSecretRootSeed());
             System.out.println("    ViewerAccount = " + account.getViewKeyRootSeed());
         }
         System.out.println("    DetectorRootKey = " + account.getDetectorRootKey());
+    }
+
+    private static void printAccountInfo(ViewAccount viewAccount) throws AbelException {
+        if (viewAccount.getPrivacyLevel() == PrivacyLevel.FULLY_PRIVATE) {
+            System.out.println("    SerialNoKeyRootSeed = " + viewAccount.getSerialNoKeyRootSeed());
+            System.out.println("    ViewerAccount = " + viewAccount.getViewKeyRootSeed());
+        }
+        System.out.println("    DetectorRootKey = " + viewAccount.getDetectorRootKey());
     }
 }

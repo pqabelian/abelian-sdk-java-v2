@@ -1,10 +1,5 @@
 package info.abelian.sdk.common;
 
-import com.google.protobuf.ByteString;
-import info.abelian.sdk.go.GoProxy;
-import info.abelian.sdk.proto.Core.GetShortAbelAddressFromAbelAddressArgs;
-import info.abelian.sdk.proto.Core.GetShortAbelAddressFromAbelAddressResult;
-
 public class CryptoAddress extends Address {
 
     public CryptoAddress(byte[] data) {
