@@ -6,6 +6,7 @@ import info.abelian.sdk.common.AbelBase;
 import info.abelian.sdk.common.CryptoSeed.EntropySeed;
 import info.abelian.sdk.common.AbelException;
 
+import info.abelian.sdk.common.Fingerprint;
 import info.abelian.sdk.common.PrivacyLevel;
 import info.abelian.sdk.wallet.AbelAddress;
 import info.abelian.sdk.wallet.ViewAccount;
@@ -60,10 +61,14 @@ public class DemoAccount {
             System.out.printf("\n--> Generate abel address with sequence %d for SeqAccount[%d]\n", seqNo, i);
             AbelAddress abelAddress = seqAccounts[i].generateAbelAddress(seqNo);
             System.out.println("    Address = " + Utils.summary(abelAddress));
+            Fingerprint fingerprint =abelAddress.getFingerprint();
+            System.out.println("    Fingerprint = " + Utils.summary(fingerprint));
 
             System.out.printf("\n--> Generate abel address with sequence %d for SeqAccount[%d] again\n", seqNo, i);
             AbelAddress abelAddress2 = seqAccounts[i].generateAbelAddress(seqNo);
             System.out.println("    Address = " + Utils.summary(abelAddress2));
+            Fingerprint fingerprint2 =abelAddress2.getFingerprint();
+            System.out.println("    Fingerprint = " + Utils.summary(fingerprint2));
         }
 
 

@@ -2,6 +2,8 @@ package info.abelian.sdk.common;
 
 public class CryptoAddress extends Address {
 
+    private CoinAddress coinAddress;
+
     public CryptoAddress(byte[] data) {
         super(data);
     }
@@ -13,6 +15,14 @@ public class CryptoAddress extends Address {
     @Override
     protected void initialize() {
         super.initialize();
+        try {
+            coinAddress = new CoinAddress(
+                    Crypto.getCoinAddressFromCryptoAddress(new Bytes(getData()))
+                            .getData()
+            );
+        }catch (Exception e) {
+            throw new IllegalArgumentException("Invalid Crypto address.", e);
+        }
     }
 
     @Override
@@ -27,6 +37,10 @@ public class CryptoAddress extends Address {
 
     @Override
     public Fingerprint getFingerprint() {
-        return null;
+        try{
+            return coinAddress.getFingerprint();
+        }catch (Exception e){
+            return null;
+        }
     }
 }

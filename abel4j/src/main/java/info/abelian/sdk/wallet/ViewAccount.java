@@ -53,6 +53,11 @@ public class ViewAccount extends AbelBase {
         return detectorRootKey;
     }
 
+    static public CoinAddress decodeCoinAddressFromSerializedTxOutData(int txVersion, Bytes txOutData) throws AbelException {
+        Bytes coinAddressBytes = Crypto.decodeCoinAddressFromSerializedTxOutData(txVersion, txOutData);
+        return new CoinAddress(coinAddressBytes.getData());
+    }
+
     public Coin coinReceive(Bytes blockHash, long blockHeight, int txVersion, Bytes txid, int index, Bytes txOutData) throws AbelException {
         CoinReceiveFromTxOutDataResult result = Crypto.coinReceiveFromTxOutData(
                 detectorRootKey,
@@ -63,8 +68,10 @@ public class ViewAccount extends AbelBase {
         if (!result.getSuccess()) {
             return null;
         }
-
-        return new Coin(txVersion, new CoinID(txid, index), result.getCoinValue(), txOutData, blockHash, blockHeight, null);
+        Bytes coinAddressBytes = Crypto.decodeCoinAddressFromSerializedTxOutData(txVersion, txOutData);
+        CoinAddress coinaddress = new CoinAddress(coinAddressBytes.getData());
+        Fingerprint fingerprint = coinaddress.getFingerprint();
+        return new Coin(txVersion, new CoinID(txid, index),fingerprint, result.getCoinValue(), txOutData, blockHash, blockHeight, null);
     }
 
     public Bytes genCoinSerialNumber(CoinID coinID, BlockDescMessage[] blockDescs) throws AbelException {

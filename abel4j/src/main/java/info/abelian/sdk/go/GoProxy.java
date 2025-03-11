@@ -46,6 +46,9 @@ import info.abelian.sdk.proto.Core.GenerateCryptoKeysAndAddressByRootSeedsFromPu
 import info.abelian.sdk.proto.Core.GenerateCryptoKeysAndAddressByRootSeedsArgs;
 import info.abelian.sdk.proto.Core.GenerateCryptoKeysAndAddressByRootSeedsResult;
 
+import info.abelian.sdk.proto.Core.GetCoinAddressFromCryptoAddressArgs;
+import info.abelian.sdk.proto.Core.GetCoinAddressFromCryptoAddressResult;
+
 import info.abelian.sdk.proto.Core.GetAbelAddressFromCryptoAddressArgs;
 import info.abelian.sdk.proto.Core.GetAbelAddressFromCryptoAddressResult;
 
@@ -67,6 +70,12 @@ import info.abelian.sdk.proto.Core.GenerateRawTxDataResult;
 
 import info.abelian.sdk.proto.Core.GenerateCoinSerialNumberArgs;
 import info.abelian.sdk.proto.Core.GenerateCoinSerialNumberResult;
+
+import info.abelian.sdk.proto.Core.GetFingerprintFromCoinAddressArgs;
+import info.abelian.sdk.proto.Core.GetFingerprintFromCoinAddressResult;
+
+import info.abelian.sdk.proto.Core.DecodeCoinAddressFromSerializedTxOutDataArgs;
+import info.abelian.sdk.proto.Core.DecodeCoinAddressFromSerializedTxOutDataResult;
 
 public class GoProxy {
 
@@ -263,6 +272,14 @@ public class GoProxy {
                         GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandResult.class);
     }
 
+    public GetCoinAddressFromCryptoAddressResult goGetCoinAddressFromCryptoAddress(
+            GetCoinAddressFromCryptoAddressArgs args) throws AbelGoException {
+        return (GetCoinAddressFromCryptoAddressResult)
+                callProtoGoFunc("GetCoinAddressFromCryptoAddress", args,
+                        GetCoinAddressFromCryptoAddressResult.class);
+    }
+
+
     public GetAbelAddressFromCryptoAddressResult goGetAbelAddressFromCryptoAddress(
             GetAbelAddressFromCryptoAddressArgs args) throws AbelGoException {
         return (GetAbelAddressFromCryptoAddressResult)
@@ -310,4 +327,19 @@ public class GoProxy {
                 callProtoGoFunc("GenerateCoinSerialNumber", args,
                         GenerateCoinSerialNumberResult.class);
     }
+
+    public GetFingerprintFromCoinAddressResult goGetFingerprintFromCoinAddress(
+            GetFingerprintFromCoinAddressArgs args) throws AbelGoException {
+        return (GetFingerprintFromCoinAddressResult)
+                callProtoGoFunc("GetFingerprintFromCoinAddress", args,
+                        GetFingerprintFromCoinAddressResult.class);
+    }
+
+    public DecodeCoinAddressFromSerializedTxOutDataResult goDecodeCoinAddressFromSerializedTxOutData(
+            DecodeCoinAddressFromSerializedTxOutDataArgs args) throws AbelGoException {
+        return (DecodeCoinAddressFromSerializedTxOutDataResult)
+                callProtoGoFunc("DecodeCoinAddressFromSerializedTxOutData", args,
+                        DecodeCoinAddressFromSerializedTxOutDataResult.class);
+    }
+
 }

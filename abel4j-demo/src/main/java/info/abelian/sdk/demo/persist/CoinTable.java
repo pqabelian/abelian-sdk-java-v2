@@ -32,6 +32,8 @@ public class CoinTable {
     public String data;
 
     @DatabaseField
+    public String fingerprint;
+    @DatabaseField
     public long value;
     @DatabaseField
     String ownerAccountID;
@@ -115,7 +117,8 @@ public class CoinTable {
     if (row == null) {
       return null;
     }
-    return new Coin(row.txVersion,row.getCoinID(), row.value, new Bytes(Bytes.fromHex(row.data)) , new Bytes(Bytes.fromHex(row.blockid)),
+    return new Coin(row.txVersion,row.getCoinID(), new Bytes(row.fingerprint),row.value,
+            new Bytes(Bytes.fromHex(row.data)) , new Bytes(Bytes.fromHex(row.blockid)),
         row.blockHeight, row.snHex == null ? null : new Bytes(row.snHex));
   }
 }

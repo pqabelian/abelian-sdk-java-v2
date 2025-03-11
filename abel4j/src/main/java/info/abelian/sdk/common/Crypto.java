@@ -39,6 +39,8 @@ import info.abelian.sdk.proto.Core.GenerateCryptoKeysAndAddressByRootSeedsFromPu
 import info.abelian.sdk.proto.Core.GenerateCryptoKeysAndAddressByRootSeedsArgs;
 import info.abelian.sdk.proto.Core.GenerateCryptoKeysAndAddressByRootSeedsResult;
 
+import info.abelian.sdk.proto.Core.GetCoinAddressFromCryptoAddressArgs;
+
 import info.abelian.sdk.proto.Core.GetAbelAddressFromCryptoAddressArgs;
 
 import info.abelian.sdk.proto.Core.GetCryptoAddressFromAbelAddressArgs;
@@ -51,6 +53,12 @@ import info.abelian.sdk.proto.Core.CoinReceiveFromTxOutDataResult;
 
 import info.abelian.sdk.proto.Core.GenerateCoinSerialNumberArgs;
 import info.abelian.sdk.proto.Core.GenerateCoinSerialNumberResult;
+
+import info.abelian.sdk.proto.Core.GetFingerprintFromCoinAddressArgs;
+import info.abelian.sdk.proto.Core.GetFingerprintFromCoinAddressResult;
+
+import info.abelian.sdk.proto.Core.DecodeCoinAddressFromSerializedTxOutDataArgs;
+import info.abelian.sdk.proto.Core.DecodeCoinAddressFromSerializedTxOutDataResult;
 
 import java.util.Arrays;
 
@@ -223,7 +231,7 @@ public class Crypto extends AbelBase {
         }
     }
 
-    public static Bytes sequenceNoToPublicRand(PublicRandRootSeed publicRandRootSeed,Integer seqNo) throws AbelException {
+    public static Bytes sequenceNoToPublicRand(PublicRandRootSeed publicRandRootSeed, Integer seqNo) throws AbelException {
         try {
             SequenceNoToPublicRandArgs args = SequenceNoToPublicRandArgs.newBuilder()
                     .setPublicRandRootSeed(ByteString.copyFrom(publicRandRootSeed.getData()))
@@ -255,6 +263,19 @@ public class Crypto extends AbelBase {
             builder.setDetectorRootKey(ByteString.copyFrom(detectorRootKey.getData()));
             builder.setPublicRand(ByteString.copyFrom(publicRand.getData()));
             return getGoProxy().goGenerateCryptoKeysAndAddressByRootSeedsFromPublicRand(builder.build());
+        } catch (Exception e) {
+            throw new AbelException(e);
+        }
+    }
+
+    public static Bytes getCoinAddressFromCryptoAddress(
+            Bytes cryptoAddress) throws AbelException {
+        try {
+            GetCoinAddressFromCryptoAddressArgs args = GetCoinAddressFromCryptoAddressArgs.newBuilder()
+                    .setCryptoAddress(ByteString.copyFrom(cryptoAddress.getData()))
+                    .build();
+
+            return new Bytes(getGoProxy().goGetCoinAddressFromCryptoAddress(args).getCoinAddress().toByteArray());
         } catch (Exception e) {
             throw new AbelException(e);
         }
@@ -303,7 +324,7 @@ public class Crypto extends AbelBase {
         try {
             CoinReceiveFromTxOutDataArgs.Builder builder = CoinReceiveFromTxOutDataArgs.newBuilder();
             builder.setCoinDetectorRootKey(ByteString.copyFrom(detectorRootKey.getData()));
-            if (privacyLevel == PrivacyLevel.FULLY_PRIVATE){
+            if (privacyLevel == PrivacyLevel.FULLY_PRIVATE) {
                 builder.setCoinViewSecretRootSeed(ByteString.copyFrom(viewKeyRootSeed.getData()));
             }
             builder.setAccountPrivacyLevel(privacyLevel.getValue());
@@ -333,6 +354,36 @@ public class Crypto extends AbelBase {
 
             GenerateCoinSerialNumberResult result = getGoProxy().goGenerateCoinSerialNumber(builder.build());
             return new Bytes(result.getSerialNumber().toByteArray());
+        } catch (Exception e) {
+            throw new AbelException(e);
+        }
+    }
+
+    public static Bytes getFingerprintFromCoinAddress(
+            Bytes coinAddress) throws AbelException {
+        try {
+            GetFingerprintFromCoinAddressArgs.Builder builder = GetFingerprintFromCoinAddressArgs.newBuilder();
+            builder.setCoinAddress(ByteString.copyFrom(coinAddress.getData()));
+
+
+            GetFingerprintFromCoinAddressResult result = getGoProxy().goGetFingerprintFromCoinAddress(builder.build());
+            return new Bytes(result.getFingerprint().toByteArray());
+        } catch (Exception e) {
+            throw new AbelException(e);
+        }
+    }
+
+    public static Bytes decodeCoinAddressFromSerializedTxOutData(
+            Integer txVersion,
+            Bytes txOutData) throws AbelException {
+        try {
+            DecodeCoinAddressFromSerializedTxOutDataArgs.Builder builder = DecodeCoinAddressFromSerializedTxOutDataArgs.newBuilder();
+            builder.setTxVersion(txVersion);
+            builder.setSerializedTxOutData(ByteString.copyFrom(txOutData.getData()));
+
+
+            DecodeCoinAddressFromSerializedTxOutDataResult result = getGoProxy().goDecodeCoinAddressFromSerializedTxOutData(builder.build());
+            return new Bytes(result.getCoinAddress().toByteArray());
         } catch (Exception e) {
             throw new AbelException(e);
         }

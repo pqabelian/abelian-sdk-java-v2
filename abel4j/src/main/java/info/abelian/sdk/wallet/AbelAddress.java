@@ -48,7 +48,7 @@ public class AbelAddress extends Address {
 
     @Override
     public Fingerprint getFingerprint() {
-        return shortAddress.getFingerprint();
+        return cryptoAddress.getFingerprint();
     }
 
     public Bytes getCryptoAddress() {

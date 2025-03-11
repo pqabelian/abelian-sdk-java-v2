@@ -27,6 +27,8 @@ public interface GoLibrary extends Library {
 
     public Pointer GenerateCryptoKeysAndAddressByRootSeedsFromPublicRand(Object... params);
 
+    public Pointer GetCoinAddressFromCryptoAddress(Object... params);
+
     public Pointer GetAbelAddressFromCryptoAddress(Object... params);
 
     public Pointer GetCryptoAddressFromAbelAddress(Object... params);
@@ -40,4 +42,8 @@ public interface GoLibrary extends Library {
     public Pointer GenerateRawTxData(Object... params);
 
     public Pointer GenerateCoinSerialNumber(Object... params);
+
+    public Pointer GetFingerprintFromCoinAddress(Object... params);
+
+    public Pointer DecodeCoinAddressFromSerializedTxOutData(Object... params);
 }

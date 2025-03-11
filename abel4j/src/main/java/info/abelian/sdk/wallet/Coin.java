@@ -8,15 +8,18 @@ public class Coin extends Struct {
   public CoinID id;
   public long blockHeight;
   public Bytes blockid;
+  public Bytes fingerprint;
   public long value;
   public Bytes serialNumber;
   public Bytes txOutData;
   public Bytes ringid;
   public int ringIndex;
 
-  public Coin(int txVersion,CoinID id, long value, Bytes txOutData, Bytes blockid, long blockHeight, Bytes serialNumber) {
+  public Coin(int txVersion,CoinID id,Bytes fingerprint, long value,
+              Bytes txOutData, Bytes blockid, long blockHeight, Bytes serialNumber) {
     this.txVersion = txVersion;
     this.id = id;
+    this.fingerprint=fingerprint;
     this.value = value;
     this.txOutData = txOutData;
     this.blockid = blockid;
@@ -29,6 +32,8 @@ public class Coin extends Struct {
   }
 
   public String toString() {
-    return String.format("COIN(id=%s, height=%d, blockid=%s, value=%d, script=%s)", id, blockHeight,blockid, value, txOutData);
+    return String.format("COIN(id=%s, height=%d, blockid=%s, fingerprint=%s value=%d, script=%s)",
+            id, blockHeight,blockid,
+            fingerprint,value, txOutData);
   }
 }

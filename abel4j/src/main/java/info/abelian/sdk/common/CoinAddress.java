@@ -27,6 +27,11 @@ public class CoinAddress extends Address {
 
   @Override
   public Fingerprint getFingerprint() {
-    return null;
+    try {
+      Bytes fingerprint = Crypto.getFingerprintFromCoinAddress(new Bytes(getData()));
+      return new Fingerprint(fingerprint.getData());
+    }catch (Exception e) {
+      return null;
+    }
   }
 }
