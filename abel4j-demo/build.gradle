@@ -7,7 +7,7 @@ plugins {
     id 'application'
 }
 
-version = '2.0.0'
+version = '2.0.1'
 
 compileJava {
     options.encoding = 'UTF-8'
@@ -42,7 +42,7 @@ application {
 
 jar {
     archiveBaseName = 'abel4j-demo'
-    archiveVersion = '2.0.0'
+    archiveVersion = '2.0.1'
 }
 
 distTar {
