@@ -3,7 +3,7 @@ package info.abelian.sdk.rpc;
 import info.abelian.sdk.common.Bytes;
 import info.abelian.sdk.common.Struct;
 
-public class TxVin extends Struct {
-  public Bytes serialNumber;
-  public Ring ring;
+public class Outpoint extends Struct {
+    public Bytes txid;
+    public Integer index;
 }

@@ -313,6 +313,25 @@ public class AbecRPCClient extends AbelBase {
       JsonNode vin = vins.get(i);
       ti.vins[i] = new TxVin();
       ti.vins[i].serialNumber = new Bytes(vin.get("serialnumber").asText());
+      ti.vins[i].ring = new Ring();
+
+      JsonNode ring = vin.get("prevutxoring");
+      ti.vins[i].ring.version=ring.get("version").asInt();
+
+      JsonNode blockHashs  = ring.get("blockhashs");
+      ti.vins[i].ring.blockhashs = new Bytes[blockHashs.size()];
+      for (int j = 0; j < blockHashs.size(); j++) {
+        ti.vins[i].ring.blockhashs[j] = new Bytes(blockHashs.get(j).asText());
+      }
+
+      JsonNode outpoints  = ring.get("outpoints");
+      ti.vins[i].ring.outpoints = new Outpoint[outpoints.size()];
+      for (int j = 0; j < outpoints.size(); j++) {
+        JsonNode outpoint = outpoints.get(j);
+        ti.vins[i].ring.outpoints[j]=new Outpoint();
+        ti.vins[i].ring.outpoints[j].txid = new Bytes(outpoint.get("txid").asText());
+        ti.vins[i].ring.outpoints[j].index = outpoint.get("index").asInt();
+      }
     }
 
     JsonNode vouts = resp.getResult().get("vout");
