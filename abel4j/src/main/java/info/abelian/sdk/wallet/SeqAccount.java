@@ -54,8 +54,12 @@ public class SeqAccount extends Account {
             ByteString cryptoAddress = generateKeysAndAddress(
                     viewAccount.privacyLevel,
                     new SpendSecretRootSeed(super.getSpendSecretRootSeed().getData()),
-                    viewAccount.privacyLevel == PrivacyLevel.PSEUDO_PRIVATE ?null:new SerialNoSecretRootSeed(viewAccount.serialNoSecretRootSeed.getData()),
-                    viewAccount.privacyLevel == PrivacyLevel.PSEUDO_PRIVATE ?null:new ViewSecretRootSeed(viewAccount.viewKeyRootSeed.getData()),
+                    (viewAccount.privacyLevel == PrivacyLevel.PSEUDO_PRIVATE|| viewAccount.privacyLevel == PrivacyLevel.PSEUDO_CT_PRIVATE) ?
+                            null:
+                            new SerialNoSecretRootSeed(viewAccount.serialNoSecretRootSeed.getData()),
+                    viewAccount.privacyLevel == PrivacyLevel.PSEUDO_PRIVATE ?
+                            null:
+                            new ViewSecretRootSeed(viewAccount.viewKeyRootSeed.getData()),
                     new DetectorRootKey(viewAccount.detectorRootKey.getData()),
                     new Bytes(sequenceNoToPublicRand(publicRandRootSeed,seqNo).getData())).getCryptoAddress();
 

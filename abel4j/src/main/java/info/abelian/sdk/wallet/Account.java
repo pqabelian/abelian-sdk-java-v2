@@ -74,12 +74,22 @@ public class Account extends AbelBase {
     }
 
     public AbelAddress generateAbelAddress() throws AbelException {
-        GenerateCryptoKeysAndAddressByRootSeedsResult result = Crypto.generateKeysAndAddress(
-                viewAccount.privacyLevel,
-                new SpendSecretRootSeed(spendSecretRootSeed.getData()),
-                new SerialNoSecretRootSeed(viewAccount.serialNoSecretRootSeed.getData()),
-                new ViewSecretRootSeed(viewAccount.viewKeyRootSeed.getData()),
-                new DetectorRootKey(viewAccount.detectorRootKey.getData()));
+        GenerateCryptoKeysAndAddressByRootSeedsResult result = null;
+        if (viewAccount.privacyLevel == PrivacyLevel.FULLY_PRIVATE) {
+            result = Crypto.generateKeysAndAddress(
+                    viewAccount.privacyLevel,
+                    new SpendSecretRootSeed(spendSecretRootSeed.getData()),
+                    new SerialNoSecretRootSeed(viewAccount.serialNoSecretRootSeed.getData()),
+                    new ViewSecretRootSeed(viewAccount.viewKeyRootSeed.getData()),
+                    new DetectorRootKey(viewAccount.detectorRootKey.getData()));
+        } else if (viewAccount.privacyLevel == PrivacyLevel.PSEUDO_PRIVATE) {
+            result = Crypto.generateKeysAndAddress(
+                    viewAccount.privacyLevel,
+                    new SpendSecretRootSeed(spendSecretRootSeed.getData()),
+                    new DetectorRootKey(viewAccount.detectorRootKey.getData()));
+        }else{
+            throw new AbelException("Unsupported privacy level: " + viewAccount.privacyLevel);
+        }
 
         return new AbelAddress(
                 Crypto.getAbelAddressFromCryptoAddress(

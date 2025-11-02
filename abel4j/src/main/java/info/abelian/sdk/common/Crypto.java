@@ -231,6 +231,28 @@ public class Crypto extends AbelBase {
         }
     }
 
+    public static GenerateCryptoKeysAndAddressByRootSeedsResult generateKeysAndAddress(
+            PrivacyLevel privacyLevel,
+            SpendSecretRootSeed spendSecretRootSeed,
+            ViewSecretRootSeed viewKeyRootSeed,
+            DetectorRootKey detectorRootKey)
+            throws AbelException {
+        try {
+            if (privacyLevel != PrivacyLevel.PSEUDO_CT_PRIVATE) {
+                throw new AbelException("Privacy level must be PSEUDO_PRIVATE_CT");
+            }
+            GenerateCryptoKeysAndAddressByRootSeedsArgs args = GenerateCryptoKeysAndAddressByRootSeedsArgs.newBuilder()
+                    .setPrivacyLevel(privacyLevel.getValue())
+                    .setSpendKeyRootSeed(ByteString.copyFrom(spendSecretRootSeed.getData()))
+                    .setViewKeyRootSeed(ByteString.copyFrom(viewKeyRootSeed.getData()))
+                    .setDetectorRootKey(ByteString.copyFrom(detectorRootKey.getData()))
+                    .build();
+            return getGoProxy().goGenerateCryptoKeysAndAddressByRootSeeds(args);
+        } catch (Exception e) {
+            throw new AbelException(e);
+        }
+    }
+
     public static Bytes sequenceNoToPublicRand(PublicRandRootSeed publicRandRootSeed, Integer seqNo) throws AbelException {
         try {
             SequenceNoToPublicRandArgs args = SequenceNoToPublicRandArgs.newBuilder()
@@ -256,8 +278,10 @@ public class Crypto extends AbelBase {
             GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandArgs.Builder builder = GenerateCryptoKeysAndAddressByRootSeedsFromPublicRandArgs.newBuilder();
             builder.setPrivacyLevel(privacyLevel.getValue());
             builder.setSpendKeyRootSeed(ByteString.copyFrom(spendSecretRootSeed.getData()));
-            if (privacyLevel != PrivacyLevel.PSEUDO_PRIVATE) {
+            if (privacyLevel == PrivacyLevel.FULLY_PRIVATE) {
                 builder.setSerialNoKeyRootSeed(ByteString.copyFrom(serialNoSecretRootSeed.getData()));
+                builder.setViewKeyRootSeed(ByteString.copyFrom(viewKeyRootSeed.getData()));
+            }else if (privacyLevel == PrivacyLevel.PSEUDO_CT_PRIVATE){
                 builder.setViewKeyRootSeed(ByteString.copyFrom(viewKeyRootSeed.getData()));
             }
             builder.setDetectorRootKey(ByteString.copyFrom(detectorRootKey.getData()));
@@ -324,7 +348,8 @@ public class Crypto extends AbelBase {
         try {
             CoinReceiveFromTxOutDataArgs.Builder builder = CoinReceiveFromTxOutDataArgs.newBuilder();
             builder.setCoinDetectorRootKey(ByteString.copyFrom(detectorRootKey.getData()));
-            if (privacyLevel == PrivacyLevel.FULLY_PRIVATE) {
+            if (privacyLevel == PrivacyLevel.FULLY_PRIVATE ||
+                    privacyLevel == PrivacyLevel.PSEUDO_CT_PRIVATE) {
                 builder.setCoinViewSecretRootSeed(ByteString.copyFrom(viewKeyRootSeed.getData()));
             }
             builder.setAccountPrivacyLevel(privacyLevel.getValue());

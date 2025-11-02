@@ -62,7 +62,8 @@ public class TxSigner extends Wallet {
                 builder.addPrivacyLevels(accountPrivacyLevel.getValue());
                 builder.addSpendKeyRootSeeds(ByteString.copyFrom(signerAccount.getSpendSecretRootSeed().getData()));
                 builder.addSerialNoKeyRootSeeds(
-                       accountPrivacyLevel== PrivacyLevel.PSEUDO_PRIVATE ? ByteString.empty()
+                        (accountPrivacyLevel== PrivacyLevel.PSEUDO_PRIVATE || accountPrivacyLevel== PrivacyLevel.PSEUDO_CT_PRIVATE) ?
+                                ByteString.empty()
                                 : ByteString.copyFrom(signerAccount.getSerialNoSecretRootSeed().getData()));
                 builder.addViewKeyRootSeeds(
                        accountPrivacyLevel== PrivacyLevel.PSEUDO_PRIVATE ? ByteString.empty()

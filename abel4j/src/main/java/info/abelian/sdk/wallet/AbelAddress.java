@@ -43,8 +43,9 @@ public class AbelAddress extends Address {
 
     @Override
     protected Integer[] getExpectedLength() {
-        return new Integer[]{10729, 10859, 231};
+        return new Integer[]{10729, 10859, 231,1419};
     }
+
 
     @Override
     public Fingerprint getFingerprint() {

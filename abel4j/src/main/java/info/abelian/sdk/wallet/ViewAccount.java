@@ -26,8 +26,10 @@ public class ViewAccount extends AbelBase {
                        DetectorRootKey detectorRootKey) {
         this.chainID = chainID;
         this.privacyLevel = privacyLevel;
-        if (privacyLevel != PrivacyLevel.PSEUDO_PRIVATE) {
+        if (privacyLevel == PrivacyLevel.FULLY_PRIVATE) {
             this.serialNoSecretRootSeed = serialNoSecretRootSeed;
+            this.viewKeyRootSeed = viewKeyRootSeed;
+        }else if (privacyLevel == PrivacyLevel.PSEUDO_CT_PRIVATE){
             this.viewKeyRootSeed = viewKeyRootSeed;
         }
         this.detectorRootKey = detectorRootKey;
@@ -76,7 +78,7 @@ public class ViewAccount extends AbelBase {
 
     public Bytes genCoinSerialNumber(CoinID coinID, BlockDescMessage[] blockDescs) throws AbelException {
         SerialNoSecretRootSeed localSerialNoSecretRootSeed = serialNoSecretRootSeed;
-        if (privacyLevel == PrivacyLevel.PSEUDO_PRIVATE) {
+        if (privacyLevel == PrivacyLevel.PSEUDO_PRIVATE || privacyLevel == PrivacyLevel.PSEUDO_CT_PRIVATE) {
             localSerialNoSecretRootSeed = null;
         }
         return Crypto.generateCoinSerialNumber(

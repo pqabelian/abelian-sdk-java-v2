@@ -27,7 +27,7 @@ public class CryptoAddress extends Address {
 
     @Override
     protected Integer[] getExpectedLength() {
-        return new Integer[]{10696, 10826, 198};
+        return new Integer[]{10696, 10826, 198, 1386};
     }
 
     @Override
