@@ -14,6 +14,7 @@ import info.abelian.sdk.rpc.ChainInfo;
 import info.abelian.sdk.rpc.TxInfo;
 import info.abelian.sdk.rpc.TxVin;
 import info.abelian.sdk.rpc.TxVout;
+import info.abelian.sdk.wallet.AbelAddress;
 
 public class DemoBasic {
 
@@ -46,6 +47,8 @@ public class DemoBasic {
     System.out.println("    CryptoAddress[0] = " + Utils.summary(ckaa.getCryptoAddress()));
     Bytes abelAddress = Crypto.getAbelAddressFromCryptoAddress(1,new Bytes(ckaa.getCryptoAddress().toByteArray()));
     System.out.println("    AbelAddress[0] = " + Utils.summary(abelAddress));
+    AbelAddress abelAddressFromString = new AbelAddress(abelAddress.toHex());
+    System.out.println("    AbelAddressFromString[0] = " + Utils.summary(abelAddressFromString));
     Bytes shortAddress = Crypto.getShortAbelAddressFromAbelAddress(abelAddress);
     System.out.println("    ShortAddress[0] = " + Utils.summary(shortAddress));
 
@@ -59,8 +62,26 @@ public class DemoBasic {
     System.out.println("    CryptoAddress[1] = " + Utils.summary(ckaa.getCryptoAddress()));
     abelAddress = Crypto.getAbelAddressFromCryptoAddress(1,new Bytes(ckaa.getCryptoAddress().toByteArray()));
     System.out.println("    AbelAddress[1] = " + Utils.summary(abelAddress));
+    abelAddressFromString = new AbelAddress(abelAddress.toHex());
+    System.out.println("    AbelAddressFromString[1] = " + Utils.summary(abelAddressFromString));
     shortAddress = Crypto.getShortAbelAddressFromAbelAddress(abelAddress);
     System.out.println("    ShortAddress[1] = " + Utils.summary(shortAddress));
+
+      System.out.println("\n    Generate a PSEUDO-CT-PRIVATE crypto address from above crypto seeds:");
+      ckaa = Crypto.generateKeysAndAddress(
+              PrivacyLevel.PSEUDO_CT_PRIVATE,
+              new SpendSecretRootSeed(cryptoSeeds[0]),
+              new ViewSecretRootSeed(cryptoSeeds[2]),
+              new DetectorRootKey(cryptoSeeds[3])
+      );
+      System.out.println("    PrivacyLevel = " + PrivacyLevel.PSEUDO_CT_PRIVATE);
+      System.out.println("    CryptoAddress[2] = " + Utils.summary(ckaa.getCryptoAddress()));
+      abelAddress = Crypto.getAbelAddressFromCryptoAddress(2,new Bytes(ckaa.getCryptoAddress().toByteArray()));
+      System.out.println("    AbelAddress[2] = " + Utils.summary(abelAddress));
+      abelAddressFromString = new AbelAddress(abelAddress.toHex());
+      System.out.println("    abelAddressFromString[2] = " + Utils.summary(abelAddressFromString));
+      shortAddress = Crypto.getShortAbelAddressFromAbelAddress(abelAddress);
+      System.out.println("    ShortAddress[2] = " + Utils.summary(shortAddress));
   }
 
   // Demo AbecRPCClient.
