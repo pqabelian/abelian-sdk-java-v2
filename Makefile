@@ -1,5 +1,5 @@
 CACHE_DIR=.cache
-LIBABELSDK_DIST_URL=https://github.com/pqabelian/abelian-sdk-go-v2/releases/download/v2.1.0/libabelsdk-2.1.0.tar.gz
+LIBABELSDK_DIST_URL=https://github.com/pqabelian/abelian-sdk-go-v2/releases/download/v2.1.0-pre/libabelsdk-2.1.0-pre.tar.gz
 LIBABELSDK_DIST_NAME=libabelsdk-2.1.0
 LIBABELSDK_DIST_FILE=$(LIBABELSDK_DIST_NAME).tar.gz
 RESOURCES_DIR=abel4j/src/main/resources
